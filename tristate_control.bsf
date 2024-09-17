@@ -143,13 +143,6 @@ applicable agreement for further details.
 		(line (pt 0 288)(pt 16 288)(line_width 3))
 	)
 	(port
-		(pt 0 304)
-		(input)
-		(text "output_enable" (rect 0 0 54 12)(font "Arial" ))
-		(text "output_enable" (rect 21 299 75 311)(font "Arial" ))
-		(line (pt 0 304)(pt 16 304)(line_width 1))
-	)
-	(port
 		(pt 232 32)
 		(output)
 		(text "output_data[3..0]" (rect 0 0 66 12)(font "Arial" ))

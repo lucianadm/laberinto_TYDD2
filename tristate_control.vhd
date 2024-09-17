@@ -27,16 +27,15 @@ entity tristate_control is
         select_line : in  std_logic_vector(3 downto 0);
 
         -- Salida triestado de 4 bits
-        output_data : out std_logic_vector(3 downto 0);
-        output_enable : in std_logic -- Habilita la salida triestado
+        output_data : out std_logic_vector(3 downto 0)
+        
     );
 end tristate_control;
 
 architecture Behavioral of tristate_control is
 begin
-    process(select_line, output_enable)
+    process(select_line)
     begin
-        if output_enable = '1' then
             case select_line is
                 when "0000" => output_data <= input_0;
                 when "0001" => output_data <= input_1;
@@ -56,8 +55,5 @@ begin
                 when "1111" => output_data <= input_15;
                 when others => output_data <= "ZZZZ"; -- Alta impedancia
             end case;
-        else
-            output_data <= "ZZZZ"; -- Alta impedancia si output_enable es '0'
-        end if;
     end process;
 end Behavioral;

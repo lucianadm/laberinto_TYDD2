@@ -1,0 +1,192 @@
+$comment
+	File created using the following command:
+		vcd file raton.msim.vcd -direction
+$end
+$date
+	Tue Sep 17 11:13:17 2024
+$end
+$version
+	ModelSim Version 10.1d
+$end
+$timescale
+	1ps
+$end
+$scope module casillero_vlg_vec_tst $end
+$var reg 4 ! A [3:0] $end
+$var reg 4 " B [3:0] $end
+$var reg 4 # C [3:0] $end
+$var reg 1 $ clk $end
+$var reg 4 % D [3:0] $end
+$var reg 1 & D_in_A $end
+$var reg 1 ' D_in_B $end
+$var reg 1 ( D_in_C $end
+$var reg 1 ) D_in_D $end
+$var reg 1 * reset $end
+$var wire 1 + out_value [3] $end
+$var wire 1 , out_value [2] $end
+$var wire 1 - out_value [1] $end
+$var wire 1 . out_value [0] $end
+$var wire 1 / sampler $end
+$scope module i1 $end
+$var wire 1 0 gnd $end
+$var wire 1 1 vcc $end
+$var wire 1 2 unknown $end
+$var tri1 1 3 devclrn $end
+$var tri1 1 4 devpor $end
+$var tri1 1 5 devoe $end
+$var wire 1 6 mux_D_out[0]~0_combout $end
+$var wire 1 7 mux_D_out[1]~1_combout $end
+$var wire 1 8 min_value~11_combout $end
+$var wire 1 9 mux_B_out[2]~2_combout $end
+$var wire 1 : mux_D_out[3]~3_combout $end
+$var wire 1 ; LessThan2~0_combout $end
+$var wire 1 < B[0]~input_o $end
+$var wire 1 = C[0]~input_o $end
+$var wire 1 > D[0]~input_o $end
+$var wire 1 ? B[1]~input_o $end
+$var wire 1 @ C[1]~input_o $end
+$var wire 1 A D[1]~input_o $end
+$var wire 1 B B[2]~input_o $end
+$var wire 1 C C[3]~input_o $end
+$var wire 1 D D[3]~input_o $end
+$var wire 1 E clk~input_o $end
+$var wire 1 F clk~inputclkctrl_outclk $end
+$var wire 1 G out_value[0]~output_o $end
+$var wire 1 H out_value[1]~output_o $end
+$var wire 1 I out_value[2]~output_o $end
+$var wire 1 J out_value[3]~output_o $end
+$var wire 1 K A[0]~input_o $end
+$var wire 1 L D_in_B~input_o $end
+$var wire 1 M reset~input_o $end
+$var wire 1 N reset~inputclkctrl_outclk $end
+$var wire 1 O sel_B~q $end
+$var wire 1 P mux_B_out[0]~0_combout $end
+$var wire 1 Q A[3]~input_o $end
+$var wire 1 R B[3]~input_o $end
+$var wire 1 S mux_B_out[3]~3_combout $end
+$var wire 1 T mux_B_out[1]~1_combout $end
+$var wire 1 U A[1]~input_o $end
+$var wire 1 V D_in_A~input_o $end
+$var wire 1 W sel_A~q $end
+$var wire 1 X min_value~8_combout $end
+$var wire 1 Y min_value~12_combout $end
+$var wire 1 Z LessThan0~0_combout $end
+$var wire 1 [ A[2]~input_o $end
+$var wire 1 \ D[2]~input_o $end
+$var wire 1 ] D_in_D~input_o $end
+$var wire 1 ^ sel_D~q $end
+$var wire 1 _ mux_D_out[2]~2_combout $end
+$var wire 1 ` C[2]~input_o $end
+$var wire 1 a mux_C_out[2]~2_combout $end
+$var wire 1 b min_value~13_combout $end
+$var wire 1 c min_value~14_combout $end
+$var wire 1 d LessThan0~1_combout $end
+$var wire 1 e LessThan0~2_combout $end
+$var wire 1 f LessThan2~1_combout $end
+$var wire 1 g LessThan2~2_combout $end
+$var wire 1 h min_value~6_combout $end
+$var wire 1 i D_in_C~input_o $end
+$var wire 1 j sel_C~q $end
+$var wire 1 k mux_C_out[3]~3_combout $end
+$var wire 1 l min_value~15_combout $end
+$var wire 1 m min_value~16_combout $end
+$var wire 1 n mux_C_out[1]~1_combout $end
+$var wire 1 o LessThan1~0_combout $end
+$var wire 1 p LessThan1~1_combout $end
+$var wire 1 q LessThan1~2_combout $end
+$var wire 1 r min_value~7_combout $end
+$var wire 1 s mux_C_out[0]~0_combout $end
+$var wire 1 t min_value~9_combout $end
+$var wire 1 u min_value~10_combout $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+#0
+$dumpvars
+b11 !
+b1 "
+b100 #
+0$
+b100 %
+0&
+0'
+0(
+0)
+1*
+x.
+x-
+x,
+x+
+x/
+00
+11
+x2
+13
+14
+15
+06
+07
+x8
+19
+1:
+x;
+1<
+0=
+0>
+0?
+0@
+0A
+0B
+0C
+0D
+0E
+0F
+xG
+xH
+xI
+xJ
+1K
+0L
+1M
+1N
+0O
+0P
+0Q
+0R
+1S
+0T
+1U
+0V
+0W
+xX
+xY
+xZ
+0[
+1\
+0]
+0^
+1_
+1`
+1a
+xb
+xc
+xd
+xe
+xf
+xg
+xh
+0i
+0j
+1k
+xl
+xm
+0n
+xo
+xp
+xq
+xr
+0s
+xt
+xu
+$end
+#1000000
