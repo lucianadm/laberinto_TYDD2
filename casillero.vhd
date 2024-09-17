@@ -129,23 +129,12 @@ begin
     end process;
 	 
 
-    -- Comparador para encontrar el valor más pequeño
-    process(mux_A_out, mux_B_out, mux_C_out, mux_D_out)
-    begin
-        min_value <= mux_A_out;
-        if mux_B_out < min_value then
-            min_value <= mux_B_out;
-        end if;
-        if mux_C_out < min_value then
-            min_value <= mux_C_out;
-        end if;
-        if mux_D_out < min_value then
-            min_value <= mux_D_out;
-        end if;
-    end process;
-
+ min_value <= mux_A_out when (mux_A_out <= mux_B_out) and (mux_A_out <= mux_C_out) and (mux_A_out <= mux_D_out) else
+                 mux_B_out when (mux_B_out <= mux_A_out) and (mux_B_out <= mux_C_out) and (mux_B_out <= mux_D_out) else
+                 mux_C_out when (mux_C_out <= mux_A_out) and (mux_C_out <= mux_B_out) and (mux_C_out <= mux_D_out) else
+                 mux_D_out; 
     -- Sumar 1 al valor mínimo y asignar a la salida
-   -- out_value <= std_logic_vector(min_value + to_unsigned(1, 4));
+    out_value <= std_logic_vector(min_value + to_unsigned(1, 4));
 --
-    out_value <= std_logic_vector(min_value);
+    --out_value <= std_logic_vector(min_value);
 end Behavioral;
