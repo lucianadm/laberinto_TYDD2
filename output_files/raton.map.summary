@@ -1,13 +1,13 @@
-Analysis & Synthesis Status : Successful - Tue Sep 17 14:28:39 2024
+Analysis & Synthesis Status : Successful - Sat Sep 21 12:40:40 2024
 Quartus II 64-Bit Version : 13.0.1 Build 232 06/12/2013 SP 1 SJ Web Edition
 Revision Name : raton
-Top-level Entity Name : matriz_pru
+Top-level Entity Name : casillero
 Family : Cyclone III
-Total logic elements : 479
-    Total combinational functions : 479
-    Dedicated logic registers : 0
-Total registers : 0
-Total pins : 69
+Total logic elements : 69
+    Total combinational functions : 65
+    Dedicated logic registers : 8
+Total registers : 8
+Total pins : 27
 Total virtual pins : 0
 Total memory bits : 0
 Embedded Multiplier 9-bit elements : 0
