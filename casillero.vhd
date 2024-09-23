@@ -134,9 +134,9 @@ begin
 	 
 
  min_value <= mux_Arriba when (mux_Arriba <= mux_Adelante) and (mux_Arriba <= mux_Abajo) and (mux_Arriba <= mux_Atras) else
-                 mux_Adelante when (mux_Adelante <= mux_Arriba) and (mux_Adelante <= mux_Abajo) and (mux_Adelante<= mux_Atras) else
-                 mux_Abajo when (mux_Abajo <= mux_Arriba) and (mux_Abajo <= mux_Adelante) and (mux_Abajo <= mux_Atras) else
-                 mux_Atras; 
+              mux_Adelante when (mux_Adelante <= mux_Arriba) and (mux_Adelante <= mux_Abajo) and (mux_Adelante<= mux_Atras) else
+              mux_Abajo when (mux_Abajo <= mux_Arriba) and (mux_Abajo <= mux_Adelante) and (mux_Abajo <= mux_Atras) else
+              mux_Atras; 
     -- Sumar 1 al valor mínimo y asignar a la salida
     min_suma <= std_logic_vector(min_value + to_unsigned(1, 4));
 	 

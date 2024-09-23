@@ -1,5 +1,5 @@
 Flow report for raton
-Sat Sep 21 12:41:26 2024
+Sun Sep 22 22:22:32 2024
 Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
 
 
@@ -40,18 +40,18 @@ applicable agreement for further details.
 +--------------------------------------------------------------------------------------+
 ; Flow Summary                                                                         ;
 +------------------------------------+-------------------------------------------------+
-; Flow Status                        ; Successful - Sat Sep 21 12:41:26 2024           ;
+; Flow Status                        ; Successful - Sun Sep 22 22:22:32 2024           ;
 ; Quartus II 64-Bit Version          ; 13.0.1 Build 232 06/12/2013 SP 1 SJ Web Edition ;
 ; Revision Name                      ; raton                                           ;
-; Top-level Entity Name              ; casillero                                       ;
+; Top-level Entity Name              ; matriz                                          ;
 ; Family                             ; Cyclone III                                     ;
 ; Device                             ; EP3C120F780C7                                   ;
 ; Timing Models                      ; Final                                           ;
-; Total logic elements               ; 66 / 119,088 ( < 1 % )                          ;
-;     Total combinational functions  ; 65 / 119,088 ( < 1 % )                          ;
-;     Dedicated logic registers      ; 8 / 119,088 ( < 1 % )                           ;
-; Total registers                    ; 8                                               ;
-; Total pins                         ; 27 / 532 ( 5 % )                                ;
+; Total logic elements               ; 891 / 119,088 ( < 1 % )                         ;
+;     Total combinational functions  ; 879 / 119,088 ( < 1 % )                         ;
+;     Dedicated logic registers      ; 119 / 119,088 ( < 1 % )                         ;
+; Total registers                    ; 119                                             ;
+; Total pins                         ; 102 / 532 ( 19 % )                              ;
 ; Total virtual pins                 ; 0                                               ;
 ; Total memory bits                  ; 0 / 3,981,312 ( 0 % )                           ;
 ; Embedded Multiplier 9-bit elements ; 0 / 576 ( 0 % )                                 ;
@@ -64,7 +64,7 @@ applicable agreement for further details.
 +-------------------+---------------------+
 ; Option            ; Setting             ;
 +-------------------+---------------------+
-; Start date & time ; 09/21/2024 12:40:36 ;
+; Start date & time ; 09/22/2024 22:21:09 ;
 ; Main task         ; Compilation         ;
 ; Revision Name     ; raton               ;
 +-------------------+---------------------+
@@ -75,20 +75,20 @@ applicable agreement for further details.
 +-------------------------------------+---------------------------------------+---------------+-------------+----------------+
 ; Assignment Name                     ; Value                                 ; Default Value ; Entity Name ; Section Id     ;
 +-------------------------------------+---------------------------------------+---------------+-------------+----------------+
-; COMPILER_SIGNATURE_ID               ; 154239759967022.172693323611520       ; --            ; --          ; --             ;
+; COMPILER_SIGNATURE_ID               ; 154239759967022.172705446907128       ; --            ; --          ; --             ;
 ; EDA_GENERATE_FUNCTIONAL_NETLIST     ; On                                    ; --            ; --          ; eda_simulation ;
 ; EDA_OUTPUT_DATA_FORMAT              ; Verilog Hdl                           ; --            ; --          ; eda_simulation ;
 ; EDA_SIMULATION_TOOL                 ; ModelSim-Altera (Verilog)             ; <None>        ; --          ; --             ;
 ; MAX_CORE_JUNCTION_TEMP              ; 85                                    ; --            ; --          ; --             ;
 ; MIN_CORE_JUNCTION_TEMP              ; 0                                     ; --            ; --          ; --             ;
 ; NOMINAL_CORE_SUPPLY_VOLTAGE         ; 1.2V                                  ; --            ; --          ; --             ;
-; PARTITION_COLOR                     ; 16764057                              ; --            ; casillero   ; Top            ;
-; PARTITION_FITTER_PRESERVATION_LEVEL ; PLACEMENT_AND_ROUTING                 ; --            ; casillero   ; Top            ;
-; PARTITION_NETLIST_TYPE              ; SOURCE                                ; --            ; casillero   ; Top            ;
+; PARTITION_COLOR                     ; 16764057                              ; --            ; matriz      ; Top            ;
+; PARTITION_FITTER_PRESERVATION_LEVEL ; PLACEMENT_AND_ROUTING                 ; --            ; matriz      ; Top            ;
+; PARTITION_NETLIST_TYPE              ; SOURCE                                ; --            ; matriz      ; Top            ;
 ; POWER_BOARD_THERMAL_MODEL           ; None (CONSERVATIVE)                   ; --            ; --          ; --             ;
 ; POWER_PRESET_COOLING_SOLUTION       ; 23 MM HEAT SINK WITH 200 LFPM AIRFLOW ; --            ; --          ; --             ;
 ; PROJECT_OUTPUT_DIRECTORY            ; output_files                          ; --            ; --          ; --             ;
-; TOP_LEVEL_ENTITY                    ; casillero                             ; raton         ; --          ; --             ;
+; TOP_LEVEL_ENTITY                    ; matriz                                ; raton         ; --          ; --             ;
 +-------------------------------------+---------------------------------------+---------------+-------------+----------------+
 
 
@@ -97,12 +97,14 @@ applicable agreement for further details.
 +---------------------------+--------------+-------------------------+---------------------+------------------------------------+
 ; Module Name               ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
 +---------------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Analysis & Synthesis      ; 00:00:04     ; 1.0                     ; 4629 MB             ; 00:00:01                           ;
-; Fitter                    ; 00:00:29     ; 1.0                     ; 5046 MB             ; 00:00:18                           ;
-; Assembler                 ; 00:00:05     ; 1.0                     ; 4561 MB             ; 00:00:04                           ;
-; TimeQuest Timing Analyzer ; 00:00:02     ; 1.0                     ; 4646 MB             ; 00:00:02                           ;
-; EDA Netlist Writer        ; 00:00:00     ; 1.0                     ; 4517 MB             ; 00:00:00                           ;
-; Total                     ; 00:00:40     ; --                      ; --                  ; 00:00:25                           ;
+; Analysis & Synthesis      ; 00:00:04     ; 1.0                     ; 4641 MB             ; 00:00:04                           ;
+; Fitter                    ; 00:00:28     ; 1.0                     ; 5060 MB             ; 00:00:22                           ;
+; Assembler                 ; 00:00:05     ; 1.0                     ; 4569 MB             ; 00:00:04                           ;
+; TimeQuest Timing Analyzer ; 00:00:05     ; 1.0                     ; 4664 MB             ; 00:00:02                           ;
+; EDA Netlist Writer        ; 00:00:02     ; 1.0                     ; 4527 MB             ; 00:00:01                           ;
+; EDA Netlist Writer        ; 00:00:01     ; 1.0                     ; 4534 MB             ; 00:00:00                           ;
+; EDA Netlist Writer        ; 00:00:01     ; 1.0                     ; 4534 MB             ; 00:00:01                           ;
+; Total                     ; 00:00:46     ; --                      ; --                  ; 00:00:34                           ;
 +---------------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 
@@ -116,6 +118,8 @@ applicable agreement for further details.
 ; Assembler                 ; DESKTOP-793I7VA  ; Windows 7 ; 6.2        ; x86_64         ;
 ; TimeQuest Timing Analyzer ; DESKTOP-793I7VA  ; Windows 7 ; 6.2        ; x86_64         ;
 ; EDA Netlist Writer        ; DESKTOP-793I7VA  ; Windows 7 ; 6.2        ; x86_64         ;
+; EDA Netlist Writer        ; DESKTOP-793I7VA  ; Windows 7 ; 6.2        ; x86_64         ;
+; EDA Netlist Writer        ; DESKTOP-793I7VA  ; Windows 7 ; 6.2        ; x86_64         ;
 +---------------------------+------------------+-----------+------------+----------------+
 
 
@@ -127,6 +131,8 @@ quartus_fit --read_settings_files=off --write_settings_files=off raton -c raton
 quartus_asm --read_settings_files=off --write_settings_files=off raton -c raton
 quartus_sta raton -c raton
 quartus_eda --read_settings_files=off --write_settings_files=off raton -c raton
+quartus_eda --gen_testbench --check_outputs=on --tool=modelsim_oem --format=verilog raton -c raton --vector_source=D:/ayudantia_RATON/Waveform1.vwf --testbench_file=./simulation/qsim/raton.vt
+quartus_eda --functional=on --simulation=on --tool=modelsim_oem --format=verilog raton -c raton
 
 
 
