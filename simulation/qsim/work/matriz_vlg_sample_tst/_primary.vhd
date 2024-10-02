@@ -3,10 +3,10 @@ use verilog.vl_types.all;
 entity matriz_vlg_sample_tst is
     port(
         clk             : in     vl_logic;
-        D_in_A          : in     vl_logic;
-        D_in_B          : in     vl_logic;
-        D_in_C          : in     vl_logic;
-        D_in_D          : in     vl_logic;
+        D_Abajo         : in     vl_logic;
+        D_Adelante      : in     vl_logic;
+        D_Arriba        : in     vl_logic;
+        D_Atras         : in     vl_logic;
         EN              : in     vl_logic;
         LEE1            : in     vl_logic_vector(3 downto 0);
         LEE2            : in     vl_logic_vector(3 downto 0);

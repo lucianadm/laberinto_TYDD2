@@ -7,10 +7,10 @@ entity matriz is
         num_casillero   : in     vl_logic_vector(3 downto 0);
         accion          : out    vl_logic_vector(1 downto 0);
         C0              : out    vl_logic_vector(3 downto 0);
-        D_in_A          : in     vl_logic;
-        D_in_B          : in     vl_logic;
-        D_in_C          : in     vl_logic;
-        D_in_D          : in     vl_logic;
+        D_Arriba        : in     vl_logic;
+        D_Adelante      : in     vl_logic;
+        D_Abajo         : in     vl_logic;
+        D_Atras         : in     vl_logic;
         clk             : in     vl_logic;
         reset           : in     vl_logic;
         CE1             : out    vl_logic_vector(3 downto 0);

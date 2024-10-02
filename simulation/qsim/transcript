@@ -17,15 +17,15 @@
 # Loading work.matriz_vlg_vec_tst
 # Loading work.matriz
 # Loading cycloneiii_ver.cycloneiii_lcell_comb
-# Loading altera_ver.dffeas
 # Loading cycloneiii_ver.cycloneiii_io_ibuf
 # Loading cycloneiii_ver.cycloneiii_clkctrl
 # Loading cycloneiii_ver.cycloneiii_mux41
 # Loading cycloneiii_ver.cycloneiii_ena_reg
 # Loading cycloneiii_ver.cycloneiii_io_obuf
+# Loading altera_ver.dffeas
 # Loading work.matriz_vlg_sample_tst
 # Loading work.matriz_vlg_check_tst
 # Loading altera_ver.PRIM_GDFF_LOW
 # Simulation passed !
-# ** Note: $finish    : raton.vt(321)
+# ** Note: $finish    : raton.vt(1657)
 #    Time: 1 us  Iteration: 0  Instance: /matriz_vlg_vec_tst/tb_out
