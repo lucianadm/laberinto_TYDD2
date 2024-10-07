@@ -9,14 +9,14 @@ entity casillero is
 		    Arriba, Adelante, Abajo, Atras : in std_logic_vector(3 downto 0);
         -- Entradas de los flip-flops D (para controlar la selección de los multiplexores)
         D_Arriba, D_Adelante, D_Abajo, D_Atras : in std_logic :='0';
-
+			ena_Ar,ena_Ad,ena_Ab,ena_At : in std_logic;
         -- Reloj para los flip-flops D
         clk : in std_logic;
 
         -- Señal de reset
         reset : in std_logic;
         -- Señal de habilitacion
-        ena : in std_logic;
+        
         -- Salida de 4 bits
         out_value : out std_logic_vector(3 downto 0)
     );
@@ -113,7 +113,7 @@ begin
     end process;
 	--clk_reset<=clk and reset;
     -- Flip-flop D para controlar la selección de los multiplexores con reset asíncrono
-    process(clk, reset, ena)
+    process(clk, reset)
     begin
         if reset = '1' then
             -- Inicializa todos los flip-flops a '0' cuando reset está activo
@@ -122,13 +122,16 @@ begin
             sel_Abajo <= '0';
             sel_Atras <= '0';
         elsif rising_edge(clk) then
-		  if ena = '1' then
+		  if ena_Ar = '1' then
             -- Actualiza los flip-flops en el borde de subida del reloj
             sel_Arriba <= D_Arriba;
-            sel_Adelante <= D_Adelante;
-            sel_Abajo <= D_Abajo;
-            sel_Atras <= D_Atras;
-				end if;
+     		elsif ena_Ad = '1' then
+			   sel_Adelante <= D_Adelante;
+			elsif ena_Ab = '1' then
+			    sel_Abajo <= D_Abajo;
+			elsif ena_At = '1' then
+            sel_Atras <= D_Atras;			
+			end if;
         end if;
     end process;
 	 

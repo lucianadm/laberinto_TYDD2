@@ -1,5 +1,5 @@
 Analysis & Synthesis report for raton
-Sat Sep 28 20:28:43 2024
+Sun Oct 06 21:19:38 2024
 Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
 
 
@@ -44,16 +44,16 @@ applicable agreement for further details.
 +--------------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                         ;
 +------------------------------------+-------------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Sat Sep 28 20:28:43 2024           ;
+; Analysis & Synthesis Status        ; Successful - Sun Oct 06 21:19:38 2024           ;
 ; Quartus II 64-Bit Version          ; 13.0.1 Build 232 06/12/2013 SP 1 SJ Web Edition ;
 ; Revision Name                      ; raton                                           ;
 ; Top-level Entity Name              ; matriz                                          ;
 ; Family                             ; Cyclone III                                     ;
-; Total logic elements               ; 940                                             ;
-;     Total combinational functions  ; 881                                             ;
-;     Dedicated logic registers      ; 119                                             ;
-; Total registers                    ; 119                                             ;
-; Total pins                         ; 102                                             ;
+; Total logic elements               ; 983                                             ;
+;     Total combinational functions  ; 983                                             ;
+;     Dedicated logic registers      ; 131                                             ;
+; Total registers                    ; 131                                             ;
+; Total pins                         ; 120                                             ;
 ; Total virtual pins                 ; 0                                               ;
 ; Total memory bits                  ; 0                                               ;
 ; Embedded Multiplier 9-bit elements ; 0                                               ;
@@ -159,19 +159,25 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +----------------------------+--------+
 
 
-+---------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Source Files Read                                                                                                      ;
-+----------------------------------+-----------------+------------------------------------+-----------------------------------------+---------+
-; File Name with User-Entered Path ; Used in Netlist ; File Type                          ; File Name with Absolute Path            ; Library ;
-+----------------------------------+-----------------+------------------------------------+-----------------------------------------+---------+
-; decoder4to16.vhd                 ; yes             ; User VHDL File                     ; D:/ayudantia_RATON/decoder4to16.vhd     ;         ;
-; compara_vecinos.vhd              ; yes             ; User VHDL File                     ; D:/ayudantia_RATON/compara_vecinos.vhd  ;         ;
-; casillero.vhd                    ; yes             ; User VHDL File                     ; D:/ayudantia_RATON/casillero.vhd        ;         ;
-; tristate_control.vhd             ; yes             ; User VHDL File                     ; D:/ayudantia_RATON/tristate_control.vhd ;         ;
-; F.vhd                            ; yes             ; User VHDL File                     ; D:/ayudantia_RATON/F.vhd                ;         ;
-; cero.vhd                         ; yes             ; User VHDL File                     ; D:/ayudantia_RATON/cero.vhd             ;         ;
-; matriz.bdf                       ; yes             ; User Block Diagram/Schematic File  ; D:/ayudantia_RATON/matriz.bdf           ;         ;
-+----------------------------------+-----------------+------------------------------------+-----------------------------------------+---------+
++-----------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                        ;
++----------------------------------+-----------------+------------------------------------+-------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type                          ; File Name with Absolute Path              ; Library ;
++----------------------------------+-----------------+------------------------------------+-------------------------------------------+---------+
+; decoder4to16.vhd                 ; yes             ; User VHDL File                     ; D:/ayudantia_RATON/decoder4to16.vhd       ;         ;
+; compara_vecinos.vhd              ; yes             ; User VHDL File                     ; D:/ayudantia_RATON/compara_vecinos.vhd    ;         ;
+; casillero.vhd                    ; yes             ; User VHDL File                     ; D:/ayudantia_RATON/casillero.vhd          ;         ;
+; tristate_control.vhd             ; yes             ; User VHDL File                     ; D:/ayudantia_RATON/tristate_control.vhd   ;         ;
+; F.vhd                            ; yes             ; User VHDL File                     ; D:/ayudantia_RATON/F.vhd                  ;         ;
+; cero.vhd                         ; yes             ; User VHDL File                     ; D:/ayudantia_RATON/cero.vhd               ;         ;
+; matriz.bdf                       ; yes             ; User Block Diagram/Schematic File  ; D:/ayudantia_RATON/matriz.bdf             ;         ;
+; actualiza_actual.vhd             ; yes             ; User VHDL File                     ; D:/ayudantia_RATON/actualiza_actual.vhd   ;         ;
+; genera_accion.vhd                ; yes             ; User VHDL File                     ; D:/ayudantia_RATON/genera_accion.vhd      ;         ;
+; sentido.vhd                      ; yes             ; User VHDL File                     ; D:/ayudantia_RATON/sentido.vhd            ;         ;
+; accion.vhd                       ; yes             ; User VHDL File                     ; D:/ayudantia_RATON/accion.vhd             ;         ;
+; genera_direcciones.vhd           ; yes             ; User VHDL File                     ; D:/ayudantia_RATON/genera_direcciones.vhd ;         ;
+; actualiza_muro.vhd               ; yes             ; User VHDL File                     ; D:/ayudantia_RATON/actualiza_muro.vhd     ;         ;
++----------------------------------+-----------------+------------------------------------+-------------------------------------------+---------+
 
 
 +-----------------------------------------------------------+
@@ -179,68 +185,80 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +---------------------------------------------+-------------+
 ; Resource                                    ; Usage       ;
 +---------------------------------------------+-------------+
-; Estimated Total logic elements              ; 940         ;
+; Estimated Total logic elements              ; 983         ;
 ;                                             ;             ;
-; Total combinational functions               ; 881         ;
+; Total combinational functions               ; 983         ;
 ; Logic element usage by number of LUT inputs ;             ;
-;     -- 4 input functions                    ; 549         ;
-;     -- 3 input functions                    ; 258         ;
-;     -- <=2 input functions                  ; 74          ;
+;     -- 4 input functions                    ; 651         ;
+;     -- 3 input functions                    ; 256         ;
+;     -- <=2 input functions                  ; 76          ;
 ;                                             ;             ;
 ; Logic elements by mode                      ;             ;
-;     -- normal mode                          ; 881         ;
-;     -- arithmetic mode                      ; 0           ;
+;     -- normal mode                          ; 980         ;
+;     -- arithmetic mode                      ; 3           ;
 ;                                             ;             ;
-; Total registers                             ; 119         ;
-;     -- Dedicated logic registers            ; 119         ;
+; Total registers                             ; 131         ;
+;     -- Dedicated logic registers            ; 131         ;
 ;     -- I/O registers                        ; 0           ;
 ;                                             ;             ;
-; I/O pins                                    ; 102         ;
+; I/O pins                                    ; 120         ;
 ; Embedded Multiplier 9-bit elements          ; 0           ;
 ; Maximum fan-out node                        ; reset~input ;
-; Maximum fan-out                             ; 377         ;
-; Total fan-out                               ; 3711        ;
-; Average fan-out                             ; 3.08        ;
+; Maximum fan-out                             ; 374         ;
+; Total fan-out                               ; 4137        ;
+; Average fan-out                             ; 3.06        ;
 +---------------------------------------------+-------------+
 
 
-+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                       ;
-+------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+---------------------------------+--------------+
-; Compilation Hierarchy Node   ; LC Combinationals ; LC Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name             ; Library Name ;
-+------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+---------------------------------+--------------+
-; |matriz                      ; 881 (0)           ; 119 (0)      ; 0           ; 0            ; 0       ; 0         ; 102  ; 0            ; |matriz                         ; work         ;
-;    |casillero:inst0|         ; 38 (38)           ; 8 (8)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |matriz|casillero:inst0         ; work         ;
-;    |casillero:inst10|        ; 65 (65)           ; 8 (8)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |matriz|casillero:inst10        ; work         ;
-;    |casillero:inst11|        ; 26 (26)           ; 7 (7)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |matriz|casillero:inst11        ; work         ;
-;    |casillero:inst12|        ; 32 (32)           ; 8 (8)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |matriz|casillero:inst12        ; work         ;
-;    |casillero:inst13|        ; 53 (53)           ; 8 (8)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |matriz|casillero:inst13        ; work         ;
-;    |casillero:inst14|        ; 27 (27)           ; 8 (8)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |matriz|casillero:inst14        ; work         ;
-;    |casillero:inst1|         ; 52 (52)           ; 8 (8)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |matriz|casillero:inst1         ; work         ;
-;    |casillero:inst2|         ; 52 (52)           ; 8 (8)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |matriz|casillero:inst2         ; work         ;
-;    |casillero:inst3|         ; 36 (36)           ; 8 (8)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |matriz|casillero:inst3         ; work         ;
-;    |casillero:inst4|         ; 60 (60)           ; 8 (8)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |matriz|casillero:inst4         ; work         ;
-;    |casillero:inst5|         ; 64 (64)           ; 8 (8)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |matriz|casillero:inst5         ; work         ;
-;    |casillero:inst6|         ; 63 (63)           ; 8 (8)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |matriz|casillero:inst6         ; work         ;
-;    |casillero:inst7|         ; 54 (54)           ; 8 (8)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |matriz|casillero:inst7         ; work         ;
-;    |casillero:inst8|         ; 59 (59)           ; 8 (8)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |matriz|casillero:inst8         ; work         ;
-;    |casillero:inst9|         ; 63 (63)           ; 8 (8)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |matriz|casillero:inst9         ; work         ;
-;    |compara_vecinos:inst19|  ; 19 (19)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |matriz|compara_vecinos:inst19  ; work         ;
-;    |decoder4to16:inst|       ; 32 (32)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |matriz|decoder4to16:inst       ; work         ;
-;    |tristate_control:inst17| ; 43 (43)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |matriz|tristate_control:inst17 ; work         ;
-;    |tristate_control:inst18| ; 43 (43)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |matriz|tristate_control:inst18 ; work         ;
-+------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+---------------------------------+--------------+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                           ;
++--------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+-----------------------------------+--------------+
+; Compilation Hierarchy Node     ; LC Combinationals ; LC Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name               ; Library Name ;
++--------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+-----------------------------------+--------------+
+; |matriz                        ; 983 (1)           ; 131 (0)      ; 0           ; 0            ; 0       ; 0         ; 120  ; 0            ; |matriz                           ; work         ;
+;    |accion:inst22|             ; 0 (0)             ; 2 (2)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |matriz|accion:inst22             ; work         ;
+;    |actualiza_actual:inst24|   ; 6 (6)             ; 4 (4)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |matriz|actualiza_actual:inst24   ; work         ;
+;    |actualiza_muro:pone_muro|  ; 0 (0)             ; 4 (4)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |matriz|actualiza_muro:pone_muro  ; work         ;
+;    |casillero:inst0|           ; 44 (44)           ; 8 (8)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |matriz|casillero:inst0           ; work         ;
+;    |casillero:inst10|          ; 63 (63)           ; 8 (8)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |matriz|casillero:inst10          ; work         ;
+;    |casillero:inst11|          ; 28 (28)           ; 7 (7)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |matriz|casillero:inst11          ; work         ;
+;    |casillero:inst12|          ; 36 (36)           ; 8 (8)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |matriz|casillero:inst12          ; work         ;
+;    |casillero:inst13|          ; 59 (59)           ; 8 (8)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |matriz|casillero:inst13          ; work         ;
+;    |casillero:inst14|          ; 32 (32)           ; 8 (8)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |matriz|casillero:inst14          ; work         ;
+;    |casillero:inst1|           ; 57 (57)           ; 8 (8)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |matriz|casillero:inst1           ; work         ;
+;    |casillero:inst2|           ; 57 (57)           ; 8 (8)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |matriz|casillero:inst2           ; work         ;
+;    |casillero:inst3|           ; 37 (37)           ; 8 (8)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |matriz|casillero:inst3           ; work         ;
+;    |casillero:inst4|           ; 58 (58)           ; 8 (8)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |matriz|casillero:inst4           ; work         ;
+;    |casillero:inst5|           ; 64 (64)           ; 8 (8)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |matriz|casillero:inst5           ; work         ;
+;    |casillero:inst6|           ; 63 (63)           ; 8 (8)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |matriz|casillero:inst6           ; work         ;
+;    |casillero:inst7|           ; 56 (56)           ; 8 (8)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |matriz|casillero:inst7           ; work         ;
+;    |casillero:inst8|           ; 58 (58)           ; 8 (8)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |matriz|casillero:inst8           ; work         ;
+;    |casillero:inst9|           ; 65 (65)           ; 8 (8)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |matriz|casillero:inst9           ; work         ;
+;    |compara_vecinos:inst15|    ; 29 (29)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |matriz|compara_vecinos:inst15    ; work         ;
+;    |decoder4to16:inst|         ; 17 (17)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |matriz|decoder4to16:inst         ; work         ;
+;    |genera_accion:inst20|      ; 6 (6)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |matriz|genera_accion:inst20      ; work         ;
+;    |genera_direcciones:inst23| ; 10 (10)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |matriz|genera_direcciones:inst23 ; work         ;
+;    |sentido:inst21|            ; 1 (1)             ; 2 (2)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |matriz|sentido:inst21            ; work         ;
+;    |tristate_control:inst16|   ; 9 (9)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |matriz|tristate_control:inst16   ; work         ;
+;    |tristate_control:inst17|   ; 43 (43)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |matriz|tristate_control:inst17   ; work         ;
+;    |tristate_control:inst18|   ; 41 (41)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |matriz|tristate_control:inst18   ; work         ;
+;    |tristate_control:inst19|   ; 43 (43)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |matriz|tristate_control:inst19   ; work         ;
++--------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+-----------------------------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
 
-+------------------------------------------------------------+
-; Registers Removed During Synthesis                         ;
-+---------------------------------------+--------------------+
-; Register name                         ; Reason for Removal ;
-+---------------------------------------+--------------------+
-; casillero:inst11|sel_Adelante         ; Lost fanout        ;
-; Total Number of Removed Registers = 1 ;                    ;
-+---------------------------------------+--------------------+
++---------------------------------------------------------------------------------+
+; Registers Removed During Synthesis                                              ;
++---------------------------------------+-----------------------------------------+
+; Register name                         ; Reason for Removal                      ;
++---------------------------------------+-----------------------------------------+
+; actualiza_muro:pone_muro|ena_At       ; Merged with actualiza_muro:pone_muro|At ;
+; actualiza_muro:pone_muro|ena_Ab       ; Merged with actualiza_muro:pone_muro|Ab ;
+; actualiza_muro:pone_muro|ena_Ad       ; Merged with actualiza_muro:pone_muro|Ad ;
+; actualiza_muro:pone_muro|ena_Ar       ; Merged with actualiza_muro:pone_muro|Ar ;
+; casillero:inst11|sel_Adelante         ; Lost fanout                             ;
+; Total Number of Removed Registers = 5 ;                                         ;
++---------------------------------------+-----------------------------------------+
 
 
 +------------------------------------------------------+
@@ -248,12 +266,12 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 119   ;
+; Total registers                              ; 131   ;
 ; Number of registers using Synchronous Clear  ; 0     ;
 ; Number of registers using Synchronous Load   ; 0     ;
-; Number of registers using Asynchronous Clear ; 119   ;
+; Number of registers using Asynchronous Clear ; 121   ;
 ; Number of registers using Asynchronous Load  ; 0     ;
-; Number of registers using Clock Enable       ; 59    ;
+; Number of registers using Clock Enable       ; 0     ;
 ; Number of registers using Preset             ; 0     ;
 +----------------------------------------------+-------+
 
@@ -263,37 +281,38 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +-----------------------------------------+---------+
 ; Inverted Register                       ; Fan out ;
 +-----------------------------------------+---------+
-; casillero:inst0|registro[3]             ; 16      ;
-; casillero:inst6|registro[3]             ; 13      ;
-; casillero:inst5|registro[3]             ; 14      ;
-; casillero:inst4|registro[3]             ; 12      ;
-; casillero:inst7|registro[3]             ; 11      ;
+; sentido:inst21|sentido_reg[0]           ; 10      ;
+; casillero:inst0|registro[3]             ; 11      ;
+; casillero:inst0|registro[2]             ; 9       ;
 ; casillero:inst1|registro[3]             ; 10      ;
-; casillero:inst2|registro[3]             ; 11      ;
-; casillero:inst3|registro[3]             ; 9       ;
-; casillero:inst13|registro[3]            ; 10      ;
-; casillero:inst12|registro[3]            ; 8       ;
-; casillero:inst14|registro[3]            ; 7       ;
-; casillero:inst10|registro[3]            ; 11      ;
-; casillero:inst9|registro[3]             ; 12      ;
-; casillero:inst8|registro[3]             ; 10      ;
-; casillero:inst11|registro[3]            ; 11      ;
-; casillero:inst0|registro[2]             ; 15      ;
-; casillero:inst6|registro[2]             ; 10      ;
-; casillero:inst5|registro[2]             ; 10      ;
-; casillero:inst4|registro[2]             ; 10      ;
-; casillero:inst7|registro[2]             ; 10      ;
 ; casillero:inst1|registro[2]             ; 10      ;
-; casillero:inst2|registro[2]             ; 11      ;
-; casillero:inst3|registro[2]             ; 9       ;
-; casillero:inst13|registro[2]            ; 11      ;
-; casillero:inst12|registro[2]            ; 8       ;
-; casillero:inst14|registro[2]            ; 7       ;
-; casillero:inst10|registro[2]            ; 10      ;
-; casillero:inst9|registro[2]             ; 10      ;
-; casillero:inst8|registro[2]             ; 9       ;
-; casillero:inst11|registro[2]            ; 8       ;
-; Total number of inverted registers = 30 ;         ;
+; casillero:inst10|registro[3]            ; 14      ;
+; casillero:inst10|registro[2]            ; 13      ;
+; casillero:inst11|registro[3]            ; 13      ;
+; casillero:inst11|registro[2]            ; 9       ;
+; casillero:inst12|registro[3]            ; 9       ;
+; casillero:inst12|registro[2]            ; 9       ;
+; casillero:inst13|registro[3]            ; 12      ;
+; casillero:inst13|registro[2]            ; 12      ;
+; casillero:inst14|registro[3]            ; 10      ;
+; casillero:inst14|registro[2]            ; 8       ;
+; casillero:inst2|registro[3]             ; 12      ;
+; casillero:inst2|registro[2]             ; 12      ;
+; casillero:inst3|registro[3]             ; 10      ;
+; casillero:inst3|registro[2]             ; 10      ;
+; casillero:inst4|registro[3]             ; 14      ;
+; casillero:inst4|registro[2]             ; 13      ;
+; casillero:inst5|registro[3]             ; 16      ;
+; casillero:inst5|registro[2]             ; 11      ;
+; casillero:inst6|registro[3]             ; 14      ;
+; casillero:inst6|registro[2]             ; 11      ;
+; casillero:inst7|registro[3]             ; 12      ;
+; casillero:inst7|registro[2]             ; 11      ;
+; casillero:inst8|registro[3]             ; 11      ;
+; casillero:inst8|registro[2]             ; 10      ;
+; casillero:inst9|registro[3]             ; 18      ;
+; casillero:inst9|registro[2]             ; 11      ;
+; Total number of inverted registers = 31 ;         ;
 +-----------------------------------------+---------+
 
 
@@ -302,34 +321,38 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +--------------------+-----------+---------------+----------------------+------------------------+------------+---------------------------------------+
 ; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output            ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+---------------------------------------+
-; 3:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; No         ; |matriz|casillero:inst12|min_value[3] ;
-; 3:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; No         ; |matriz|casillero:inst12|min_value[1] ;
-; 4:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; No         ; |matriz|casillero:inst0|min_value[3]  ;
-; 4:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; No         ; |matriz|casillero:inst0|min_value[0]  ;
-; 4:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; No         ; |matriz|casillero:inst1|min_value[3]  ;
+; 4:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; No         ; |matriz|tristate_control:inst18|Mux3  ;
+; 4:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; No         ; |matriz|tristate_control:inst16|Mux0  ;
+; 3:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; No         ; |matriz|casillero:inst12|min_value[2] ;
+; 3:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; No         ; |matriz|casillero:inst12|min_value[0] ;
+; 4:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; No         ; |matriz|tristate_control:inst18|Mux1  ;
+; 4:1                ; 12 bits   ; 24 LEs        ; 24 LEs               ; 0 LEs                  ; No         ; |matriz|tristate_control:inst18|Mux3  ;
+; 4:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; No         ; |matriz|casillero:inst0|min_value[2]  ;
+; 4:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; No         ; |matriz|casillero:inst0|min_value[1]  ;
+; 4:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; No         ; |matriz|casillero:inst1|min_value[2]  ;
 ; 4:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; No         ; |matriz|casillero:inst1|min_value[0]  ;
+; 4:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; No         ; |matriz|casillero:inst10|min_value[3] ;
+; 4:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; No         ; |matriz|casillero:inst13|min_value[2] ;
+; 4:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; No         ; |matriz|casillero:inst13|min_value[0] ;
+; 4:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; No         ; |matriz|casillero:inst14|min_value[2] ;
+; 4:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; No         ; |matriz|casillero:inst14|min_value[0] ;
 ; 4:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; No         ; |matriz|casillero:inst2|min_value[2]  ;
 ; 4:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; No         ; |matriz|casillero:inst2|min_value[1]  ;
-; 4:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; No         ; |matriz|casillero:inst3|min_value[3]  ;
-; 4:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; No         ; |matriz|casillero:inst3|min_value[0]  ;
+; 4:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; No         ; |matriz|casillero:inst3|min_value[2]  ;
+; 4:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; No         ; |matriz|casillero:inst3|min_value[1]  ;
 ; 4:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; No         ; |matriz|casillero:inst4|min_value[2]  ;
-; 4:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; No         ; |matriz|casillero:inst4|min_value[0]  ;
-; 4:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; No         ; |matriz|casillero:inst5|min_value[0]  ;
+; 4:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; No         ; |matriz|casillero:inst4|min_value[1]  ;
+; 4:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; No         ; |matriz|casillero:inst5|min_value[2]  ;
 ; 4:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; No         ; |matriz|casillero:inst6|min_value[0]  ;
-; 4:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; No         ; |matriz|casillero:inst7|min_value[2]  ;
-; 4:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; No         ; |matriz|casillero:inst7|min_value[1]  ;
+; 4:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; No         ; |matriz|casillero:inst7|min_value[3]  ;
+; 4:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; No         ; |matriz|casillero:inst7|min_value[0]  ;
 ; 4:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; No         ; |matriz|casillero:inst8|min_value[3]  ;
 ; 4:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; No         ; |matriz|casillero:inst8|min_value[1]  ;
 ; 4:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; No         ; |matriz|casillero:inst9|min_value[3]  ;
-; 4:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; No         ; |matriz|casillero:inst10|min_value[1] ;
-; 4:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; No         ; |matriz|casillero:inst13|min_value[2] ;
-; 4:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; No         ; |matriz|casillero:inst13|min_value[1] ;
-; 4:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; No         ; |matriz|casillero:inst14|min_value[3] ;
-; 4:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; No         ; |matriz|casillero:inst14|min_value[0] ;
-; 4:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; No         ; |matriz|casillero:inst11|min_value[0] ;
-; 4:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; No         ; |matriz|casillero:inst11|min_value[2] ;
+; 4:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; No         ; |matriz|casillero:inst11|min_value[1] ;
+; 4:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; No         ; |matriz|casillero:inst11|min_value[3] ;
 ; 16:1               ; 4 bits    ; 40 LEs        ; 40 LEs               ; 0 LEs                  ; No         ; |matriz|tristate_control:inst17|Mux0  ;
-; 16:1               ; 4 bits    ; 40 LEs        ; 40 LEs               ; 0 LEs                  ; No         ; |matriz|tristate_control:inst18|Mux3  ;
+; 16:1               ; 4 bits    ; 40 LEs        ; 40 LEs               ; 0 LEs                  ; No         ; |matriz|tristate_control:inst19|Mux1  ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+---------------------------------------+
 
 
@@ -348,7 +371,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 Info: *******************************************************************
 Info: Running Quartus II 64-Bit Analysis & Synthesis
     Info: Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
-    Info: Processing started: Sat Sep 28 20:28:38 2024
+    Info: Processing started: Sun Oct 06 21:19:34 2024
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off raton -c raton
 Warning (20028): Parallel compilation is not licensed and has been disabled
 Info (12021): Found 2 design units, including 1 entities, in source file decoder4to16.vhd
@@ -379,6 +402,24 @@ Info (12021): Found 1 design units, including 1 entities, in source file matriz.
     Info (12023): Found entity 1: matriz
 Info (12021): Found 1 design units, including 1 entities, in source file matriz_prupru.bdf
     Info (12023): Found entity 1: matriz_prupru
+Info (12021): Found 2 design units, including 1 entities, in source file actualiza_actual.vhd
+    Info (12022): Found design unit 1: actualiza_actual-Behavioral
+    Info (12023): Found entity 1: actualiza_actual
+Info (12021): Found 2 design units, including 1 entities, in source file genera_accion.vhd
+    Info (12022): Found design unit 1: genera_accion-Behavioral
+    Info (12023): Found entity 1: genera_accion
+Info (12021): Found 2 design units, including 1 entities, in source file sentido.vhd
+    Info (12022): Found design unit 1: sentido-Behavioral
+    Info (12023): Found entity 1: sentido
+Info (12021): Found 2 design units, including 1 entities, in source file accion.vhd
+    Info (12022): Found design unit 1: accion-Behavioral
+    Info (12023): Found entity 1: accion
+Info (12021): Found 2 design units, including 1 entities, in source file genera_direcciones.vhd
+    Info (12022): Found design unit 1: genera_direcciones-Behavioral
+    Info (12023): Found entity 1: genera_direcciones
+Info (12021): Found 2 design units, including 1 entities, in source file actualiza_muro.vhd
+    Info (12022): Found design unit 1: actualiza_muro-Behavioral
+    Info (12023): Found entity 1: actualiza_muro
 Info (12127): Elaborating entity "matriz" for the top level hierarchy
 Warning (275083): Bus "input_10[3..0]" found using same base name as "input_1", which might lead to a name conflict.
 Warning (275083): Bus "input_11[3..0]" found using same base name as "input_1", which might lead to a name conflict.
@@ -422,26 +463,38 @@ Warning (275080): Converted elements in bus name "input_12" using legacy naming 
     Warning (275081): Converted element name(s) from "input_12[3..0]" to "input_123..0"
 Warning (275080): Converted elements in bus name "input_13" using legacy naming rules. Make any assignments on the new names, not on the original names.
     Warning (275081): Converted element name(s) from "input_13[3..0]" to "input_133..0"
-Warning (275011): Block or symbol "F" of instance "inst31" overlaps another block or symbol
+Warning (275083): Bus "input_10[3..0]" found using same base name as "input_1", which might lead to a name conflict.
+Warning (275083): Bus "input_11[3..0]" found using same base name as "input_1", which might lead to a name conflict.
+Warning (275083): Bus "input_12[3..0]" found using same base name as "input_1", which might lead to a name conflict.
+Warning (275083): Bus "input_13[3..0]" found using same base name as "input_1", which might lead to a name conflict.
+Warning (275080): Converted elements in bus name "input_1" using legacy naming rules. Make any assignments on the new names, not on the original names.
+    Warning (275081): Converted element name(s) from "input_1[3..0]" to "input_13..0"
+Warning (275080): Converted elements in bus name "input_10" using legacy naming rules. Make any assignments on the new names, not on the original names.
+    Warning (275081): Converted element name(s) from "input_10[3..0]" to "input_103..0"
+Warning (275080): Converted elements in bus name "input_11" using legacy naming rules. Make any assignments on the new names, not on the original names.
+    Warning (275081): Converted element name(s) from "input_11[3..0]" to "input_113..0"
+Warning (275080): Converted elements in bus name "input_12" using legacy naming rules. Make any assignments on the new names, not on the original names.
+    Warning (275081): Converted element name(s) from "input_12[3..0]" to "input_123..0"
+Warning (275080): Converted elements in bus name "input_13" using legacy naming rules. Make any assignments on the new names, not on the original names.
+    Warning (275081): Converted element name(s) from "input_13[3..0]" to "input_133..0"
 Warning (275011): Block or symbol "F" of instance "inst32" overlaps another block or symbol
 Warning (275011): Block or symbol "casillero" of instance "inst0" overlaps another block or symbol
 Warning (275011): Block or symbol "casillero" of instance "inst2" overlaps another block or symbol
 Warning (275011): Block or symbol "casillero" of instance "inst5" overlaps another block or symbol
-Warning (275011): Block or symbol "F" of instance "inst_F2" overlaps another block or symbol
+Warning (275011): Block or symbol "casillero" of instance "inst6" overlaps another block or symbol
 Warning (275011): Block or symbol "F" of instance "inst_F6" overlaps another block or symbol
+Warning (275011): Block or symbol "F" of instance "inst_F7" overlaps another block or symbol
 Warning (275011): Block or symbol "F" of instance "inst_9" overlaps another block or symbol
 Warning (275011): Block or symbol "F" of instance "inst_F10" overlaps another block or symbol
-Warning (275011): Block or symbol "cero" of instance "Lllegada" overlaps another block or symbol
-Warning (275011): Block or symbol "casillero" of instance "inst8" overlaps another block or symbol
 Warning (275011): Block or symbol "casillero" of instance "inst9" overlaps another block or symbol
 Warning (275011): Block or symbol "casillero" of instance "inst11" overlaps another block or symbol
 Warning (275011): Block or symbol "casillero" of instance "inst7" overlaps another block or symbol
-Warning (275011): Block or symbol "decoder4to16" of instance "inst" overlaps another block or symbol
-Warning (275011): Block or symbol "tristate_control" of instance "inst16" overlaps another block or symbol
-Warning (275009): Pin "LEE1" not connected
+Warning (275011): Block or symbol "actualiza_muro" of instance "pone_muro" overlaps another block or symbol
 Info (12128): Elaborating entity "decoder4to16" for hierarchy "decoder4to16:inst"
-Info (12128): Elaborating entity "compara_vecinos" for hierarchy "compara_vecinos:inst19"
-Info (12128): Elaborating entity "tristate_control" for hierarchy "tristate_control:inst16"
+Info (12128): Elaborating entity "actualiza_actual" for hierarchy "actualiza_actual:inst24"
+Info (12128): Elaborating entity "sentido" for hierarchy "sentido:inst21"
+Info (12128): Elaborating entity "compara_vecinos" for hierarchy "compara_vecinos:inst15"
+Info (12128): Elaborating entity "tristate_control" for hierarchy "tristate_control:inst18"
 Warning (10492): VHDL Process Statement warning at tristate_control.vhd(40): signal "input_0" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
 Warning (10492): VHDL Process Statement warning at tristate_control.vhd(41): signal "input_1" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
 Warning (10492): VHDL Process Statement warning at tristate_control.vhd(42): signal "input_2" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
@@ -459,8 +512,17 @@ Warning (10492): VHDL Process Statement warning at tristate_control.vhd(53): sig
 Warning (10492): VHDL Process Statement warning at tristate_control.vhd(54): signal "input_14" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
 Warning (10492): VHDL Process Statement warning at tristate_control.vhd(55): signal "input_15" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
 Info (12128): Elaborating entity "casillero" for hierarchy "casillero:inst0"
+Info (12128): Elaborating entity "actualiza_muro" for hierarchy "actualiza_muro:pone_muro"
 Info (12128): Elaborating entity "F" for hierarchy "F:inst_F8"
 Info (12128): Elaborating entity "cero" for hierarchy "cero:Lllegada"
+Info (12128): Elaborating entity "genera_direcciones" for hierarchy "genera_direcciones:inst23"
+Info (12128): Elaborating entity "accion" for hierarchy "accion:inst22"
+Info (12128): Elaborating entity "genera_accion" for hierarchy "genera_accion:inst20"
+Warning (10631): VHDL Process Statement warning at genera_accion.vhd(21): inferring latch(es) for signal or variable "accion", which holds its previous value in one or more paths through the process
+Info (10041): Inferred latch for "accion[0]" at genera_accion.vhd(21)
+Info (10041): Inferred latch for "accion[1]" at genera_accion.vhd(21)
+Warning (14026): LATCH primitive "genera_accion:inst20|accion[0]" is permanently enabled
+Warning (14026): LATCH primitive "genera_accion:inst20|accion[1]" is permanently enabled
 Info (13000): Registers with preset signals will power-up high
 Info (13003): DEV_CLRn pin will set, and not reset, register with preset signal due to NOT Gate Push-Back
 Warning (13024): Output pins are stuck at VCC or GND
@@ -472,19 +534,14 @@ Info (286030): Timing-Driven Synthesis is running
 Info (17049): 1 registers lost all their fanouts during netlist optimizations.
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Warning (21074): Design contains 4 input pin(s) that do not drive logic
-    Warning (15610): No output dependent on input pin "LEE1[3]"
-    Warning (15610): No output dependent on input pin "LEE1[2]"
-    Warning (15610): No output dependent on input pin "LEE1[1]"
-    Warning (15610): No output dependent on input pin "LEE1[0]"
-Info (21057): Implemented 1057 device resources after synthesis - the final resource count might be different
-    Info (21058): Implemented 23 input pins
-    Info (21059): Implemented 79 output pins
-    Info (21061): Implemented 955 logic cells
-Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 86 warnings
-    Info: Peak virtual memory: 4647 megabytes
-    Info: Processing ended: Sat Sep 28 20:28:43 2024
-    Info: Elapsed time: 00:00:05
+Info (21057): Implemented 1120 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 5 input pins
+    Info (21059): Implemented 115 output pins
+    Info (21061): Implemented 1000 logic cells
+Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 94 warnings
+    Info: Peak virtual memory: 4632 megabytes
+    Info: Processing ended: Sun Oct 06 21:19:38 2024
+    Info: Elapsed time: 00:00:04
     Info: Total CPU time (on all processors): 00:00:04
 
 

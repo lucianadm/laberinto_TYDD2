@@ -3,16 +3,22 @@ use verilog.vl_types.all;
 entity matriz is
     port(
         Y15             : out    vl_logic;
-        EN              : in     vl_logic;
-        num_casillero   : in     vl_logic_vector(3 downto 0);
-        accion          : out    vl_logic_vector(1 downto 0);
-        C0              : out    vl_logic_vector(3 downto 0);
-        D_Arriba        : in     vl_logic;
-        D_Adelante      : in     vl_logic;
-        D_Abajo         : in     vl_logic;
-        D_Atras         : in     vl_logic;
-        clk             : in     vl_logic;
+        Hab_muro        : in     vl_logic;
+        actual          : out    vl_logic_vector(3 downto 0);
+        Hab_Actual      : in     vl_logic;
+        sentido         : out    vl_logic_vector(1 downto 0);
         reset           : in     vl_logic;
+        Hab_sentido     : in     vl_logic;
+        C0              : out    vl_logic_vector(3 downto 0);
+        D_Arriba        : out    vl_logic;
+        D_Adelante      : out    vl_logic;
+        D_Abajo         : out    vl_logic;
+        D_Atras         : out    vl_logic;
+        ena_Ar          : out    vl_logic;
+        ena_Ad          : out    vl_logic;
+        ena_Ab          : out    vl_logic;
+        ena_At          : out    vl_logic;
+        clk             : in     vl_logic;
         CE1             : out    vl_logic_vector(3 downto 0);
         C10             : out    vl_logic_vector(3 downto 0);
         C11             : out    vl_logic_vector(3 downto 0);
@@ -27,12 +33,16 @@ entity matriz is
         C7              : out    vl_logic_vector(3 downto 0);
         C8              : out    vl_logic_vector(3 downto 0);
         C9              : out    vl_logic_vector(3 downto 0);
-        LEE2            : in     vl_logic_vector(3 downto 0);
-        LEE3            : in     vl_logic_vector(3 downto 0);
+        dir_Abajo       : out    vl_logic_vector(3 downto 0);
+        dir_Adelante    : out    vl_logic_vector(3 downto 0);
+        dir_Arriba      : out    vl_logic_vector(3 downto 0);
+        dir_Atras       : out    vl_logic_vector(3 downto 0);
+        Abajo           : out    vl_logic_vector(3 downto 0);
+        accion_out      : out    vl_logic_vector(1 downto 0);
+        Adelante        : out    vl_logic_vector(3 downto 0);
+        Arriba          : out    vl_logic_vector(3 downto 0);
+        Atras           : out    vl_logic_vector(3 downto 0);
         C15             : out    vl_logic_vector(3 downto 0);
-        vecino0         : out    vl_logic_vector(3 downto 0);
-        vecino1         : out    vl_logic_vector(3 downto 0);
-        vecino2         : out    vl_logic_vector(3 downto 0);
-        LEE1            : in     vl_logic_vector(3 downto 0)
+        sentido_nw      : out    vl_logic_vector(1 downto 0)
     );
 end matriz;

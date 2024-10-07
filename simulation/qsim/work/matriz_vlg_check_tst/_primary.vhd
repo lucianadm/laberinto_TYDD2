@@ -2,7 +2,12 @@ library verilog;
 use verilog.vl_types.all;
 entity matriz_vlg_check_tst is
     port(
-        accion          : in     vl_logic_vector(1 downto 0);
+        Abajo           : in     vl_logic_vector(3 downto 0);
+        accion_out      : in     vl_logic_vector(1 downto 0);
+        actual          : in     vl_logic_vector(3 downto 0);
+        Adelante        : in     vl_logic_vector(3 downto 0);
+        Arriba          : in     vl_logic_vector(3 downto 0);
+        Atras           : in     vl_logic_vector(3 downto 0);
         C0              : in     vl_logic_vector(3 downto 0);
         C2              : in     vl_logic_vector(3 downto 0);
         C3              : in     vl_logic_vector(3 downto 0);
@@ -19,9 +24,20 @@ entity matriz_vlg_check_tst is
         C14             : in     vl_logic_vector(3 downto 0);
         C15             : in     vl_logic_vector(3 downto 0);
         CE1             : in     vl_logic_vector(3 downto 0);
-        vecino0         : in     vl_logic_vector(3 downto 0);
-        vecino1         : in     vl_logic_vector(3 downto 0);
-        vecino2         : in     vl_logic_vector(3 downto 0);
+        D_Abajo         : in     vl_logic;
+        D_Adelante      : in     vl_logic;
+        D_Arriba        : in     vl_logic;
+        D_Atras         : in     vl_logic;
+        dir_Abajo       : in     vl_logic_vector(3 downto 0);
+        dir_Adelante    : in     vl_logic_vector(3 downto 0);
+        dir_Arriba      : in     vl_logic_vector(3 downto 0);
+        dir_Atras       : in     vl_logic_vector(3 downto 0);
+        ena_Ab          : in     vl_logic;
+        ena_Ad          : in     vl_logic;
+        ena_Ar          : in     vl_logic;
+        ena_At          : in     vl_logic;
+        sentido         : in     vl_logic_vector(1 downto 0);
+        sentido_nw      : in     vl_logic_vector(1 downto 0);
         Y15             : in     vl_logic;
         sampler_rx      : in     vl_logic
     );
