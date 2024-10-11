@@ -26,6 +26,15 @@
 # Loading work.matriz_vlg_sample_tst
 # Loading work.matriz_vlg_check_tst
 # Loading altera_ver.PRIM_GDFF_LOW
-# Simulation passed !
-# ** Note: $finish    : raton.vt(2482)
+# ERROR! Vector Mismatch for output port sentido[0] :: @time = 520000.000 ps
+#      Expected value = 00
+#      Real value = 01
+# ERROR! Vector Mismatch for output port sentido[1] :: @time = 940000.000 ps
+#      Expected value = 11
+#      Real value = 01
+# ERROR! Vector Mismatch for output port sentido_nw[0] :: @time = 940000.000 ps
+#      Expected value = 00
+#      Real value = 01
+#           3 mismatched vectors : Simulation failed !
+# ** Note: $finish    : raton.vt(2502)
 #    Time: 1 us  Iteration: 0  Instance: /matriz_vlg_vec_tst/tb_out

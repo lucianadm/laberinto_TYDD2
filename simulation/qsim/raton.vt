@@ -18,7 +18,7 @@
 // the top level entity of the current Quartus project .The user can use this   
 // testbench to simulate his design using a third-party simulation tool .       
 // *****************************************************************************
-// Generated on "10/06/2024 21:23:18"
+// Generated on "10/11/2024 18:38:46"
                                                                         
 // Verilog Self-Checking Test Bench (with test vectors) for design :    matriz
 // 
@@ -397,41 +397,61 @@ end
 initial
 begin
 	actual_expected[3] = 1'bX;
+	actual_expected[3] = #310000 1'b0;
+	actual_expected[3] = #80000 1'bX;
 end 
 // expected actual[ 2 ]
 initial
 begin
 	actual_expected[2] = 1'bX;
+	actual_expected[2] = #310000 1'b0;
+	actual_expected[2] = #80000 1'bX;
 end 
 // expected actual[ 1 ]
 initial
 begin
 	actual_expected[1] = 1'bX;
+	actual_expected[1] = #310000 1'b0;
+	actual_expected[1] = #80000 1'bX;
 end 
 // expected actual[ 0 ]
 initial
 begin
 	actual_expected[0] = 1'bX;
+	actual_expected[0] = #310000 1'b0;
+	actual_expected[0] = #80000 1'bX;
 end 
 // expected sentido[ 1 ]
 initial
 begin
 	sentido_expected[1] = 1'bX;
+	sentido_expected[1] = #510000 1'b0;
+	sentido_expected[1] = #70000 1'bX;
+	sentido_expected[1] = #350000 1'b1;
+	sentido_expected[1] = #40000 1'bX;
 end 
 // expected sentido[ 0 ]
 initial
 begin
 	sentido_expected[0] = 1'bX;
+	sentido_expected[0] = #510000 1'b0;
+	sentido_expected[0] = #70000 1'bX;
+	sentido_expected[0] = #350000 1'b1;
+	sentido_expected[0] = #40000 1'bX;
 end 
 // expected sentido_nw[ 1 ]
 initial
 begin
 	sentido_nw_expected[1] = 1'bX;
+	sentido_nw_expected[1] = #930000 1'b0;
+	sentido_nw_expected[1] = #40000 1'bX;
 end 
 // expected sentido_nw[ 0 ]
 initial
 begin
 	sentido_nw_expected[0] = 1'bX;
+	sentido_nw_expected[0] = #930000 1'b0;
+	sentido_nw_expected[0] = #40000 1'bX;
 end 
 // expected Arriba[ 3 ]
 initial
@@ -2579,14 +2599,6 @@ matriz i1 (
 	.Y15(Y15)
 );
 
-// Hab_sentido
-initial
-begin
-	Hab_sentido = 1'b0;
-	Hab_sentido = #720000 1'b1;
-	Hab_sentido = #90000 1'b0;
-end 
-
 // clk
 always
 begin
@@ -2606,10 +2618,22 @@ end
 initial
 begin
 	Hab_Actual = 1'b0;
-	Hab_Actual = #320000 1'b1;
-	Hab_Actual = #60000 1'b0;
-	Hab_Actual = #110000 1'b1;
-	Hab_Actual = #70000 1'b0;
+	Hab_Actual = #490000 1'b1;
+	Hab_Actual = #20000 1'b0;
+	Hab_Actual = #340000 1'b1;
+	Hab_Actual = #20000 1'b0;
+end 
+
+// Hab_sentido
+initial
+begin
+	Hab_sentido = 1'b0;
+	Hab_sentido = #510000 1'b1;
+	Hab_sentido = #70000 1'b0;
+	Hab_sentido = #140000 1'b1;
+	Hab_sentido = #90000 1'b0;
+	Hab_sentido = #120000 1'b1;
+	Hab_sentido = #40000 1'b0;
 end 
 
 // Hab_muro
@@ -2618,6 +2642,8 @@ begin
 	Hab_muro = 1'b0;
 	Hab_muro = #640000 1'b1;
 	Hab_muro = #80000 1'b0;
+	Hab_muro = #170000 1'b1;
+	Hab_muro = #40000 1'b0;
 end 
 
 matriz_vlg_sample_tst tb_sample (

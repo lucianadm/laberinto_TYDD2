@@ -9,10 +9,10 @@ entity matriz is
         sentido         : out    vl_logic_vector(1 downto 0);
         reset           : in     vl_logic;
         Hab_sentido     : in     vl_logic;
+        D_Abajo         : out    vl_logic;
         C0              : out    vl_logic_vector(3 downto 0);
         D_Arriba        : out    vl_logic;
         D_Adelante      : out    vl_logic;
-        D_Abajo         : out    vl_logic;
         D_Atras         : out    vl_logic;
         ena_Ar          : out    vl_logic;
         ena_Ad          : out    vl_logic;

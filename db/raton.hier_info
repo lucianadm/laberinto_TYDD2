@@ -27,13 +27,13 @@ reset => casillero:inst9.reset
 reset => casillero:inst1.reset
 Hab_sentido => sentido:inst21.Hab_sentido
 Hab_sentido => accion:inst22.Hab_sentido
+D_Abajo <= actualiza_muro:pone_muro.Ab
 C0[0] <= casillero:inst0.out_value[0]
 C0[1] <= casillero:inst0.out_value[1]
 C0[2] <= casillero:inst0.out_value[2]
 C0[3] <= casillero:inst0.out_value[3]
 D_Arriba <= actualiza_muro:pone_muro.Ar
 D_Adelante <= actualiza_muro:pone_muro.Ad
-D_Abajo <= actualiza_muro:pone_muro.Ab
 D_Atras <= actualiza_muro:pone_muro.At
 ena_Ar <= actualiza_muro:pone_muro.ena_Ar
 ena_Ad <= actualiza_muro:pone_muro.ena_Ad
@@ -126,24 +126,24 @@ dir_Atras[0] <= genera_direcciones:inst23.dir_Atras[0]
 dir_Atras[1] <= genera_direcciones:inst23.dir_Atras[1]
 dir_Atras[2] <= genera_direcciones:inst23.dir_Atras[2]
 dir_Atras[3] <= genera_direcciones:inst23.dir_Atras[3]
-Abajo[0] <= tristate_control:inst18.output_data[0]
-Abajo[1] <= tristate_control:inst18.output_data[1]
-Abajo[2] <= tristate_control:inst18.output_data[2]
-Abajo[3] <= tristate_control:inst18.output_data[3]
+Abajo[0] <= uno_o_passthrough:inst77.out_bits[0]
+Abajo[1] <= uno_o_passthrough:inst77.out_bits[1]
+Abajo[2] <= uno_o_passthrough:inst77.out_bits[2]
+Abajo[3] <= uno_o_passthrough:inst77.out_bits[3]
 accion_out[0] <= accion:inst22.accion_out[0]
 accion_out[1] <= accion:inst22.accion_out[1]
-Adelante[0] <= tristate_control:inst17.output_data[0]
-Adelante[1] <= tristate_control:inst17.output_data[1]
-Adelante[2] <= tristate_control:inst17.output_data[2]
-Adelante[3] <= tristate_control:inst17.output_data[3]
-Arriba[0] <= tristate_control:inst16.output_data[0]
-Arriba[1] <= tristate_control:inst16.output_data[1]
-Arriba[2] <= tristate_control:inst16.output_data[2]
-Arriba[3] <= tristate_control:inst16.output_data[3]
-Atras[0] <= tristate_control:inst19.output_data[0]
-Atras[1] <= tristate_control:inst19.output_data[1]
-Atras[2] <= tristate_control:inst19.output_data[2]
-Atras[3] <= tristate_control:inst19.output_data[3]
+Adelante[0] <= uno_o_passthrough:inst76.out_bits[0]
+Adelante[1] <= uno_o_passthrough:inst76.out_bits[1]
+Adelante[2] <= uno_o_passthrough:inst76.out_bits[2]
+Adelante[3] <= uno_o_passthrough:inst76.out_bits[3]
+Arriba[0] <= uno_o_passthrough:inst75.out_bits[0]
+Arriba[1] <= uno_o_passthrough:inst75.out_bits[1]
+Arriba[2] <= uno_o_passthrough:inst75.out_bits[2]
+Arriba[3] <= uno_o_passthrough:inst75.out_bits[3]
+Atras[0] <= uno_o_passthrough:inst78.out_bits[0]
+Atras[1] <= uno_o_passthrough:inst78.out_bits[1]
+Atras[2] <= uno_o_passthrough:inst78.out_bits[2]
+Atras[3] <= uno_o_passthrough:inst78.out_bits[3]
 C15[0] <= cero:Lllegada.Y[0]
 C15[1] <= cero:Lllegada.Y[1]
 C15[2] <= cero:Lllegada.Y[2]
@@ -333,6 +333,56 @@ sentido_nw[0] <= sentido_nw.DB_MAX_OUTPUT_PORT_TYPE
 sentido_nw[1] <= sentido_nw.DB_MAX_OUTPUT_PORT_TYPE
 
 
+|matriz|uno_o_passthrough:inst77
+in_bits[0] => out_bits.DATAA
+in_bits[1] => out_bits.DATAA
+in_bits[2] => out_bits.DATAA
+in_bits[3] => out_bits.DATAA
+in_bit => out_bits.OUTPUTSELECT
+in_bit => out_bits.OUTPUTSELECT
+in_bit => out_bits.OUTPUTSELECT
+in_bit => out_bits.OUTPUTSELECT
+out_bits[0] <= out_bits.DB_MAX_OUTPUT_PORT_TYPE
+out_bits[1] <= out_bits.DB_MAX_OUTPUT_PORT_TYPE
+out_bits[2] <= out_bits.DB_MAX_OUTPUT_PORT_TYPE
+out_bits[3] <= out_bits.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|matriz|actualiza_muro:pone_muro
+sentido[0] => Mux0.IN5
+sentido[0] => Mux1.IN5
+sentido[0] => Mux2.IN5
+sentido[0] => Mux3.IN5
+sentido[0] => Mux4.IN5
+sentido[0] => Mux5.IN5
+sentido[0] => Mux6.IN5
+sentido[0] => Mux7.IN5
+sentido[1] => Mux0.IN4
+sentido[1] => Mux1.IN4
+sentido[1] => Mux2.IN4
+sentido[1] => Mux3.IN4
+sentido[1] => Mux4.IN4
+sentido[1] => Mux5.IN4
+sentido[1] => Mux6.IN4
+sentido[1] => Mux7.IN4
+clk => ena_At~reg0.CLK
+clk => ena_Ab~reg0.CLK
+clk => ena_Ad~reg0.CLK
+clk => ena_Ar~reg0.CLK
+clk => At~reg0.CLK
+clk => Ab~reg0.CLK
+clk => Ad~reg0.CLK
+clk => Ar~reg0.CLK
+Ar <= Ar~reg0.DB_MAX_OUTPUT_PORT_TYPE
+Ad <= Ad~reg0.DB_MAX_OUTPUT_PORT_TYPE
+Ab <= Ab~reg0.DB_MAX_OUTPUT_PORT_TYPE
+At <= At~reg0.DB_MAX_OUTPUT_PORT_TYPE
+ena_Ar <= ena_Ar~reg0.DB_MAX_OUTPUT_PORT_TYPE
+ena_Ad <= ena_Ad~reg0.DB_MAX_OUTPUT_PORT_TYPE
+ena_Ab <= ena_Ab~reg0.DB_MAX_OUTPUT_PORT_TYPE
+ena_At <= ena_At~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
 |matriz|tristate_control:inst18
 input_0[0] => Mux3.IN0
 input_0[1] => Mux2.IN0
@@ -487,41 +537,6 @@ out_value[0] <= registro[0].DB_MAX_OUTPUT_PORT_TYPE
 out_value[1] <= registro[1].DB_MAX_OUTPUT_PORT_TYPE
 out_value[2] <= registro[2].DB_MAX_OUTPUT_PORT_TYPE
 out_value[3] <= registro[3].DB_MAX_OUTPUT_PORT_TYPE
-
-
-|matriz|actualiza_muro:pone_muro
-sentido[0] => Mux0.IN5
-sentido[0] => Mux1.IN5
-sentido[0] => Mux2.IN5
-sentido[0] => Mux3.IN5
-sentido[0] => Mux4.IN5
-sentido[0] => Mux5.IN5
-sentido[0] => Mux6.IN5
-sentido[0] => Mux7.IN5
-sentido[1] => Mux0.IN4
-sentido[1] => Mux1.IN4
-sentido[1] => Mux2.IN4
-sentido[1] => Mux3.IN4
-sentido[1] => Mux4.IN4
-sentido[1] => Mux5.IN4
-sentido[1] => Mux6.IN4
-sentido[1] => Mux7.IN4
-clk => ena_At~reg0.CLK
-clk => ena_Ab~reg0.CLK
-clk => ena_Ad~reg0.CLK
-clk => ena_Ar~reg0.CLK
-clk => At~reg0.CLK
-clk => Ab~reg0.CLK
-clk => Ad~reg0.CLK
-clk => Ar~reg0.CLK
-Ar <= Ar~reg0.DB_MAX_OUTPUT_PORT_TYPE
-Ad <= Ad~reg0.DB_MAX_OUTPUT_PORT_TYPE
-Ab <= Ab~reg0.DB_MAX_OUTPUT_PORT_TYPE
-At <= At~reg0.DB_MAX_OUTPUT_PORT_TYPE
-ena_Ar <= ena_Ar~reg0.DB_MAX_OUTPUT_PORT_TYPE
-ena_Ad <= ena_Ad~reg0.DB_MAX_OUTPUT_PORT_TYPE
-ena_Ab <= ena_Ab~reg0.DB_MAX_OUTPUT_PORT_TYPE
-ena_At <= ena_At~reg0.DB_MAX_OUTPUT_PORT_TYPE
 
 
 |matriz|casillero:inst4
@@ -1632,6 +1647,21 @@ dir_Atras[2] <= At_var.DB_MAX_OUTPUT_PORT_TYPE
 dir_Atras[3] <= At_var.DB_MAX_OUTPUT_PORT_TYPE
 
 
+|matriz|uno_o_passthrough:inst76
+in_bits[0] => out_bits.DATAA
+in_bits[1] => out_bits.DATAA
+in_bits[2] => out_bits.DATAA
+in_bits[3] => out_bits.DATAA
+in_bit => out_bits.OUTPUTSELECT
+in_bit => out_bits.OUTPUTSELECT
+in_bit => out_bits.OUTPUTSELECT
+in_bit => out_bits.OUTPUTSELECT
+out_bits[0] <= out_bits.DB_MAX_OUTPUT_PORT_TYPE
+out_bits[1] <= out_bits.DB_MAX_OUTPUT_PORT_TYPE
+out_bits[2] <= out_bits.DB_MAX_OUTPUT_PORT_TYPE
+out_bits[3] <= out_bits.DB_MAX_OUTPUT_PORT_TYPE
+
+
 |matriz|tristate_control:inst17
 input_0[0] => Mux3.IN0
 input_0[1] => Mux2.IN0
@@ -1719,6 +1749,21 @@ output_data[2] <= Mux1.DB_MAX_OUTPUT_PORT_TYPE
 output_data[3] <= Mux0.DB_MAX_OUTPUT_PORT_TYPE
 
 
+|matriz|uno_o_passthrough:inst75
+in_bits[0] => out_bits.DATAA
+in_bits[1] => out_bits.DATAA
+in_bits[2] => out_bits.DATAA
+in_bits[3] => out_bits.DATAA
+in_bit => out_bits.OUTPUTSELECT
+in_bit => out_bits.OUTPUTSELECT
+in_bit => out_bits.OUTPUTSELECT
+in_bit => out_bits.OUTPUTSELECT
+out_bits[0] <= out_bits.DB_MAX_OUTPUT_PORT_TYPE
+out_bits[1] <= out_bits.DB_MAX_OUTPUT_PORT_TYPE
+out_bits[2] <= out_bits.DB_MAX_OUTPUT_PORT_TYPE
+out_bits[3] <= out_bits.DB_MAX_OUTPUT_PORT_TYPE
+
+
 |matriz|tristate_control:inst16
 input_0[0] => Mux3.IN0
 input_0[1] => Mux2.IN0
@@ -1804,6 +1849,21 @@ output_data[0] <= Mux3.DB_MAX_OUTPUT_PORT_TYPE
 output_data[1] <= Mux2.DB_MAX_OUTPUT_PORT_TYPE
 output_data[2] <= Mux1.DB_MAX_OUTPUT_PORT_TYPE
 output_data[3] <= Mux0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|matriz|uno_o_passthrough:inst78
+in_bits[0] => out_bits.DATAA
+in_bits[1] => out_bits.DATAA
+in_bits[2] => out_bits.DATAA
+in_bits[3] => out_bits.DATAA
+in_bit => out_bits.OUTPUTSELECT
+in_bit => out_bits.OUTPUTSELECT
+in_bit => out_bits.OUTPUTSELECT
+in_bit => out_bits.OUTPUTSELECT
+out_bits[0] <= out_bits.DB_MAX_OUTPUT_PORT_TYPE
+out_bits[1] <= out_bits.DB_MAX_OUTPUT_PORT_TYPE
+out_bits[2] <= out_bits.DB_MAX_OUTPUT_PORT_TYPE
+out_bits[3] <= out_bits.DB_MAX_OUTPUT_PORT_TYPE
 
 
 |matriz|tristate_control:inst19
