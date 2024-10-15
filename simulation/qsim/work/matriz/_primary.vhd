@@ -3,12 +3,13 @@ use verilog.vl_types.all;
 entity matriz is
     port(
         Y15             : out    vl_logic;
-        Hab_muro        : in     vl_logic;
-        actual          : out    vl_logic_vector(3 downto 0);
-        Hab_Actual      : in     vl_logic;
-        sentido         : out    vl_logic_vector(1 downto 0);
+        Hab_muro        : out    vl_logic;
         reset           : in     vl_logic;
-        Hab_sentido     : in     vl_logic;
+        clk             : in     vl_logic;
+        Linea           : in     vl_logic;
+        Muro            : in     vl_logic;
+        actual          : out    vl_logic_vector(3 downto 0);
+        sentido         : out    vl_logic_vector(1 downto 0);
         D_Abajo         : out    vl_logic;
         C0              : out    vl_logic_vector(3 downto 0);
         D_Arriba        : out    vl_logic;
@@ -18,7 +19,6 @@ entity matriz is
         ena_Ad          : out    vl_logic;
         ena_Ab          : out    vl_logic;
         ena_At          : out    vl_logic;
-        clk             : in     vl_logic;
         CE1             : out    vl_logic_vector(3 downto 0);
         C10             : out    vl_logic_vector(3 downto 0);
         C11             : out    vl_logic_vector(3 downto 0);
@@ -37,6 +37,9 @@ entity matriz is
         dir_Adelante    : out    vl_logic_vector(3 downto 0);
         dir_Arriba      : out    vl_logic_vector(3 downto 0);
         dir_Atras       : out    vl_logic_vector(3 downto 0);
+        Hab_sentido27   : out    vl_logic;
+        Hab_Actual28    : out    vl_logic;
+        Hab_accion29    : out    vl_logic;
         Abajo           : out    vl_logic_vector(3 downto 0);
         accion_out      : out    vl_logic_vector(1 downto 0);
         Adelante        : out    vl_logic_vector(3 downto 0);

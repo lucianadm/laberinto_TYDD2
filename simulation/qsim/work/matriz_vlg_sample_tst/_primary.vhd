@@ -3,9 +3,8 @@ use verilog.vl_types.all;
 entity matriz_vlg_sample_tst is
     port(
         clk             : in     vl_logic;
-        Hab_Actual      : in     vl_logic;
-        Hab_muro        : in     vl_logic;
-        Hab_sentido     : in     vl_logic;
+        Linea           : in     vl_logic;
+        Muro            : in     vl_logic;
         reset           : in     vl_logic;
         sampler_tx      : out    vl_logic
     );

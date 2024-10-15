@@ -2,148 +2,124 @@
 TimeQuest Timing Analyzer Summary
 ------------------------------------------------------------
 
-Type  : Slow 1200mV 85C Model Setup 'Hab_sentido'
-Slack : -6.899
-TNS   : -25.926
+Type  : Slow 1200mV 85C Model Setup 'reset'
+Slack : -7.672
+TNS   : -38.373
 
 Type  : Slow 1200mV 85C Model Setup 'clk'
-Slack : -5.671
-TNS   : -392.627
-
-Type  : Slow 1200mV 85C Model Setup 'Hab_Actual'
-Slack : -2.340
-TNS   : -7.125
-
-Type  : Slow 1200mV 85C Model Setup 'Hab_muro'
-Slack : -0.530
-TNS   : -2.083
+Slack : -5.742
+TNS   : -551.294
 
 Type  : Slow 1200mV 85C Model Hold 'clk'
-Slack : 0.385
+Slack : 0.244
 TNS   : 0.000
 
-Type  : Slow 1200mV 85C Model Hold 'Hab_sentido'
-Slack : 0.472
+Type  : Slow 1200mV 85C Model Hold 'reset'
+Slack : 0.481
 TNS   : 0.000
 
-Type  : Slow 1200mV 85C Model Hold 'Hab_Actual'
-Slack : 0.727
+Type  : Slow 1200mV 85C Model Recovery 'clk'
+Slack : -0.279
+TNS   : -10.977
+
+Type  : Slow 1200mV 85C Model Recovery 'reset'
+Slack : 0.238
 TNS   : 0.000
 
-Type  : Slow 1200mV 85C Model Hold 'Hab_muro'
-Slack : 0.836
-TNS   : 0.000
+Type  : Slow 1200mV 85C Model Removal 'clk'
+Slack : -0.241
+TNS   : -9.511
+
+Type  : Slow 1200mV 85C Model Removal 'reset'
+Slack : -0.116
+TNS   : -0.232
 
 Type  : Slow 1200mV 85C Model Minimum Pulse Width 'clk'
 Slack : -3.000
-TNS   : -155.915
+TNS   : -162.340
 
-Type  : Slow 1200mV 85C Model Minimum Pulse Width 'Hab_Actual'
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'reset'
 Slack : -3.000
-TNS   : -8.140
+TNS   : -18.420
 
-Type  : Slow 1200mV 85C Model Minimum Pulse Width 'Hab_muro'
-Slack : -3.000
-TNS   : -8.140
-
-Type  : Slow 1200mV 85C Model Minimum Pulse Width 'Hab_sentido'
-Slack : -3.000
-TNS   : -8.140
-
-Type  : Slow 1200mV 0C Model Setup 'Hab_sentido'
-Slack : -6.187
-TNS   : -23.250
+Type  : Slow 1200mV 0C Model Setup 'reset'
+Slack : -6.945
+TNS   : -33.924
 
 Type  : Slow 1200mV 0C Model Setup 'clk'
-Slack : -5.122
-TNS   : -355.009
-
-Type  : Slow 1200mV 0C Model Setup 'Hab_Actual'
-Slack : -2.087
-TNS   : -6.160
-
-Type  : Slow 1200mV 0C Model Setup 'Hab_muro'
-Slack : -0.404
-TNS   : -1.536
+Slack : -5.160
+TNS   : -499.845
 
 Type  : Slow 1200mV 0C Model Hold 'clk'
-Slack : 0.338
+Slack : 0.194
 TNS   : 0.000
 
-Type  : Slow 1200mV 0C Model Hold 'Hab_sentido'
-Slack : 0.426
+Type  : Slow 1200mV 0C Model Hold 'reset'
+Slack : 0.458
 TNS   : 0.000
 
-Type  : Slow 1200mV 0C Model Hold 'Hab_Actual'
-Slack : 0.658
+Type  : Slow 1200mV 0C Model Recovery 'clk'
+Slack : -0.334
+TNS   : -17.263
+
+Type  : Slow 1200mV 0C Model Recovery 'reset'
+Slack : 0.317
 TNS   : 0.000
 
-Type  : Slow 1200mV 0C Model Hold 'Hab_muro'
-Slack : 0.742
+Type  : Slow 1200mV 0C Model Removal 'clk'
+Slack : -0.216
+TNS   : -7.962
+
+Type  : Slow 1200mV 0C Model Removal 'reset'
+Slack : 0.005
 TNS   : 0.000
 
 Type  : Slow 1200mV 0C Model Minimum Pulse Width 'clk'
 Slack : -3.000
-TNS   : -155.915
+TNS   : -162.340
 
-Type  : Slow 1200mV 0C Model Minimum Pulse Width 'Hab_Actual'
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'reset'
 Slack : -3.000
-TNS   : -8.140
+TNS   : -18.420
 
-Type  : Slow 1200mV 0C Model Minimum Pulse Width 'Hab_muro'
-Slack : -3.000
-TNS   : -8.140
-
-Type  : Slow 1200mV 0C Model Minimum Pulse Width 'Hab_sentido'
-Slack : -3.000
-TNS   : -8.140
-
-Type  : Fast 1200mV 0C Model Setup 'Hab_sentido'
-Slack : -2.871
-TNS   : -10.706
+Type  : Fast 1200mV 0C Model Setup 'reset'
+Slack : -3.289
+TNS   : -14.021
 
 Type  : Fast 1200mV 0C Model Setup 'clk'
-Slack : -2.325
-TNS   : -162.327
-
-Type  : Fast 1200mV 0C Model Setup 'Hab_Actual'
-Slack : -0.631
-TNS   : -1.603
-
-Type  : Fast 1200mV 0C Model Setup 'Hab_muro'
-Slack : 0.206
-TNS   : 0.000
+Slack : -2.355
+TNS   : -244.143
 
 Type  : Fast 1200mV 0C Model Hold 'clk'
-Slack : 0.173
+Slack : 0.068
 TNS   : 0.000
 
-Type  : Fast 1200mV 0C Model Hold 'Hab_sentido'
-Slack : 0.216
+Type  : Fast 1200mV 0C Model Hold 'reset'
+Slack : 0.185
 TNS   : 0.000
 
-Type  : Fast 1200mV 0C Model Hold 'Hab_Actual'
-Slack : 0.337
+Type  : Fast 1200mV 0C Model Recovery 'clk'
+Slack : -0.064
+TNS   : -2.230
+
+Type  : Fast 1200mV 0C Model Recovery 'reset'
+Slack : 0.569
 TNS   : 0.000
 
-Type  : Fast 1200mV 0C Model Hold 'Hab_muro'
-Slack : 0.347
-TNS   : 0.000
+Type  : Fast 1200mV 0C Model Removal 'reset'
+Slack : -0.178
+TNS   : -0.582
+
+Type  : Fast 1200mV 0C Model Removal 'clk'
+Slack : -0.168
+TNS   : -6.943
 
 Type  : Fast 1200mV 0C Model Minimum Pulse Width 'clk'
 Slack : -3.000
-TNS   : -129.408
+TNS   : -134.199
 
-Type  : Fast 1200mV 0C Model Minimum Pulse Width 'Hab_sentido'
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'reset'
 Slack : -3.000
-TNS   : -7.244
-
-Type  : Fast 1200mV 0C Model Minimum Pulse Width 'Hab_muro'
-Slack : -3.000
-TNS   : -7.238
-
-Type  : Fast 1200mV 0C Model Minimum Pulse Width 'Hab_Actual'
-Slack : -3.000
-TNS   : -7.236
+TNS   : -15.287
 
 ------------------------------------------------------------

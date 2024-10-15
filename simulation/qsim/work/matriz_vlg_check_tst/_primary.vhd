@@ -36,6 +36,10 @@ entity matriz_vlg_check_tst is
         ena_Ad          : in     vl_logic;
         ena_Ar          : in     vl_logic;
         ena_At          : in     vl_logic;
+        Hab_accion29    : in     vl_logic;
+        Hab_Actual28    : in     vl_logic;
+        Hab_muro        : in     vl_logic;
+        Hab_sentido27   : in     vl_logic;
         sentido         : in     vl_logic_vector(1 downto 0);
         sentido_nw      : in     vl_logic_vector(1 downto 0);
         Y15             : in     vl_logic;
