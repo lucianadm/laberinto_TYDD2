@@ -1,5 +1,5 @@
 Analysis & Synthesis report for raton
-Mon Oct 14 21:19:56 2024
+Fri Oct 18 18:22:32 2024
 Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
 
 
@@ -13,13 +13,10 @@ Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edit
   5. Analysis & Synthesis Source Files Read
   6. Analysis & Synthesis Resource Usage Summary
   7. Analysis & Synthesis Resource Utilization by Entity
-  8. State Machine - |matriz|control:inst25|fstate
-  9. Registers Removed During Synthesis
- 10. General Register Statistics
- 11. Inverted Register Statistics
- 12. Multiplexer Restructuring Statistics (Restructuring Performed)
- 13. Elapsed Time Per Partition
- 14. Analysis & Synthesis Messages
+  8. General Register Statistics
+  9. Parameter Settings for User Entity Instance: Top-level Entity: |contador_n_bits
+ 10. Elapsed Time Per Partition
+ 11. Analysis & Synthesis Messages
 
 
 
@@ -45,16 +42,16 @@ applicable agreement for further details.
 +--------------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                         ;
 +------------------------------------+-------------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Mon Oct 14 21:19:56 2024           ;
+; Analysis & Synthesis Status        ; Successful - Fri Oct 18 18:22:32 2024           ;
 ; Quartus II 64-Bit Version          ; 13.0.1 Build 232 06/12/2013 SP 1 SJ Web Edition ;
 ; Revision Name                      ; raton                                           ;
-; Top-level Entity Name              ; matriz                                          ;
-; Family                             ; Cyclone III                                     ;
-; Total logic elements               ; 984                                             ;
-;     Total combinational functions  ; 984                                             ;
-;     Dedicated logic registers      ; 136                                             ;
-; Total registers                    ; 136                                             ;
-; Total pins                         ; 123                                             ;
+; Top-level Entity Name              ; contador_n_bits                                 ;
+; Family                             ; Cyclone IV E                                    ;
+; Total logic elements               ; 11                                              ;
+;     Total combinational functions  ; 11                                              ;
+;     Dedicated logic registers      ; 9                                               ;
+; Total registers                    ; 9                                               ;
+; Total pins                         ; 4                                               ;
 ; Total virtual pins                 ; 0                                               ;
 ; Total memory bits                  ; 0                                               ;
 ; Embedded Multiplier 9-bit elements ; 0                                               ;
@@ -67,9 +64,9 @@ applicable agreement for further details.
 +----------------------------------------------------------------------------+--------------------+--------------------+
 ; Option                                                                     ; Setting            ; Default Value      ;
 +----------------------------------------------------------------------------+--------------------+--------------------+
-; Device                                                                     ; EP3C120F780C7      ;                    ;
-; Top-level entity name                                                      ; matriz             ; raton              ;
-; Family name                                                                ; Cyclone III        ; Cyclone IV GX      ;
+; Device                                                                     ; EP4CE22F17C6       ;                    ;
+; Top-level entity name                                                      ; contador_n_bits    ; raton              ;
+; Family name                                                                ; Cyclone IV E       ; Cyclone IV GX      ;
 ; Use smart compilation                                                      ; Off                ; Off                ;
 ; Enable parallel Assembler and TimeQuest Timing Analyzer during compilation ; On                 ; On                 ;
 ; Enable compact report table                                                ; Off                ; Off                ;
@@ -155,129 +152,58 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +----------------------------+--------+
 ; Processors                 ; Number ;
 +----------------------------+--------+
-; Number detected on machine ; 8      ;
+; Number detected on machine ; 4      ;
 ; Maximum allowed            ; 1      ;
 +----------------------------+--------+
 
 
-+-----------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Source Files Read                                                                                                        ;
-+----------------------------------+-----------------+------------------------------------+-------------------------------------------+---------+
-; File Name with User-Entered Path ; Used in Netlist ; File Type                          ; File Name with Absolute Path              ; Library ;
-+----------------------------------+-----------------+------------------------------------+-------------------------------------------+---------+
-; decoder4to16.vhd                 ; yes             ; User VHDL File                     ; D:/ayudantia_RATON/decoder4to16.vhd       ;         ;
-; compara_vecinos.vhd              ; yes             ; User VHDL File                     ; D:/ayudantia_RATON/compara_vecinos.vhd    ;         ;
-; casillero.vhd                    ; yes             ; User VHDL File                     ; D:/ayudantia_RATON/casillero.vhd          ;         ;
-; tristate_control.vhd             ; yes             ; User VHDL File                     ; D:/ayudantia_RATON/tristate_control.vhd   ;         ;
-; F.vhd                            ; yes             ; User VHDL File                     ; D:/ayudantia_RATON/F.vhd                  ;         ;
-; cero.vhd                         ; yes             ; User VHDL File                     ; D:/ayudantia_RATON/cero.vhd               ;         ;
-; matriz.bdf                       ; yes             ; User Block Diagram/Schematic File  ; D:/ayudantia_RATON/matriz.bdf             ;         ;
-; actualiza_actual.vhd             ; yes             ; User VHDL File                     ; D:/ayudantia_RATON/actualiza_actual.vhd   ;         ;
-; genera_accion.vhd                ; yes             ; User VHDL File                     ; D:/ayudantia_RATON/genera_accion.vhd      ;         ;
-; sentido.vhd                      ; yes             ; User VHDL File                     ; D:/ayudantia_RATON/sentido.vhd            ;         ;
-; accion.vhd                       ; yes             ; User VHDL File                     ; D:/ayudantia_RATON/accion.vhd             ;         ;
-; genera_direcciones.vhd           ; yes             ; User VHDL File                     ; D:/ayudantia_RATON/genera_direcciones.vhd ;         ;
-; actualiza_muro.vhd               ; yes             ; User VHDL File                     ; D:/ayudantia_RATON/actualiza_muro.vhd     ;         ;
-; uno_o_passthrough.vhd            ; yes             ; User VHDL File                     ; D:/ayudantia_RATON/uno_o_passthrough.vhd  ;         ;
-; control.vhd                      ; yes             ; User VHDL File                     ; D:/ayudantia_RATON/control.vhd            ;         ;
-+----------------------------------+-----------------+------------------------------------+-------------------------------------------+---------+
++-----------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                              ;
++----------------------------------+-----------------+-----------------+--------------------------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type       ; File Name with Absolute Path                                       ; Library ;
++----------------------------------+-----------------+-----------------+--------------------------------------------------------------------+---------+
+; contador_n_bits.vhd              ; yes             ; User VHDL File  ; C:/Users/LSC/Desktop/Laberinto/laberinto_TYDD2/contador_n_bits.vhd ;         ;
++----------------------------------+-----------------+-----------------+--------------------------------------------------------------------+---------+
 
 
-+-----------------------------------------------------------+
-; Analysis & Synthesis Resource Usage Summary               ;
-+---------------------------------------------+-------------+
-; Resource                                    ; Usage       ;
-+---------------------------------------------+-------------+
-; Estimated Total logic elements              ; 984         ;
-;                                             ;             ;
-; Total combinational functions               ; 984         ;
-; Logic element usage by number of LUT inputs ;             ;
-;     -- 4 input functions                    ; 663         ;
-;     -- 3 input functions                    ; 236         ;
-;     -- <=2 input functions                  ; 85          ;
-;                                             ;             ;
-; Logic elements by mode                      ;             ;
-;     -- normal mode                          ; 981         ;
-;     -- arithmetic mode                      ; 3           ;
-;                                             ;             ;
-; Total registers                             ; 136         ;
-;     -- Dedicated logic registers            ; 136         ;
-;     -- I/O registers                        ; 0           ;
-;                                             ;             ;
-; I/O pins                                    ; 123         ;
-; Embedded Multiplier 9-bit elements          ; 0           ;
-; Maximum fan-out node                        ; reset~input ;
-; Maximum fan-out                             ; 388         ;
-; Total fan-out                               ; 4164        ;
-; Average fan-out                             ; 3.05        ;
-+---------------------------------------------+-------------+
++------------------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary                ;
++---------------------------------------------+--------------+
+; Resource                                    ; Usage        ;
++---------------------------------------------+--------------+
+; Estimated Total logic elements              ; 11           ;
+;                                             ;              ;
+; Total combinational functions               ; 11           ;
+; Logic element usage by number of LUT inputs ;              ;
+;     -- 4 input functions                    ; 3            ;
+;     -- 3 input functions                    ; 0            ;
+;     -- <=2 input functions                  ; 8            ;
+;                                             ;              ;
+; Logic elements by mode                      ;              ;
+;     -- normal mode                          ; 4            ;
+;     -- arithmetic mode                      ; 7            ;
+;                                             ;              ;
+; Total registers                             ; 9            ;
+;     -- Dedicated logic registers            ; 9            ;
+;     -- I/O registers                        ; 0            ;
+;                                             ;              ;
+; I/O pins                                    ; 4            ;
+; Embedded Multiplier 9-bit elements          ; 0            ;
+; Maximum fan-out node                        ; enable~input ;
+; Maximum fan-out                             ; 9            ;
+; Total fan-out                               ; 67           ;
+; Average fan-out                             ; 2.39         ;
++---------------------------------------------+--------------+
 
 
-+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                           ;
-+--------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+-----------------------------------+--------------+
-; Compilation Hierarchy Node     ; LC Combinationals ; LC Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name               ; Library Name ;
-+--------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+-----------------------------------+--------------+
-; |matriz                        ; 984 (1)           ; 136 (0)      ; 0           ; 0            ; 0       ; 0         ; 123  ; 0            ; |matriz                           ; work         ;
-;    |accion:inst22|             ; 0 (0)             ; 2 (2)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |matriz|accion:inst22             ; work         ;
-;    |actualiza_actual:inst24|   ; 6 (6)             ; 4 (4)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |matriz|actualiza_actual:inst24   ; work         ;
-;    |actualiza_muro:pone_muro|  ; 0 (0)             ; 4 (4)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |matriz|actualiza_muro:pone_muro  ; work         ;
-;    |casillero:inst0|           ; 44 (44)           ; 8 (8)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |matriz|casillero:inst0           ; work         ;
-;    |casillero:inst10|          ; 63 (63)           ; 8 (8)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |matriz|casillero:inst10          ; work         ;
-;    |casillero:inst11|          ; 28 (28)           ; 7 (7)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |matriz|casillero:inst11          ; work         ;
-;    |casillero:inst12|          ; 36 (36)           ; 8 (8)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |matriz|casillero:inst12          ; work         ;
-;    |casillero:inst13|          ; 57 (57)           ; 8 (8)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |matriz|casillero:inst13          ; work         ;
-;    |casillero:inst14|          ; 32 (32)           ; 8 (8)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |matriz|casillero:inst14          ; work         ;
-;    |casillero:inst1|           ; 58 (58)           ; 8 (8)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |matriz|casillero:inst1           ; work         ;
-;    |casillero:inst2|           ; 56 (56)           ; 8 (8)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |matriz|casillero:inst2           ; work         ;
-;    |casillero:inst3|           ; 37 (37)           ; 8 (8)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |matriz|casillero:inst3           ; work         ;
-;    |casillero:inst4|           ; 58 (58)           ; 8 (8)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |matriz|casillero:inst4           ; work         ;
-;    |casillero:inst5|           ; 63 (63)           ; 8 (8)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |matriz|casillero:inst5           ; work         ;
-;    |casillero:inst6|           ; 63 (63)           ; 8 (8)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |matriz|casillero:inst6           ; work         ;
-;    |casillero:inst7|           ; 56 (56)           ; 8 (8)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |matriz|casillero:inst7           ; work         ;
-;    |casillero:inst8|           ; 58 (58)           ; 8 (8)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |matriz|casillero:inst8           ; work         ;
-;    |casillero:inst9|           ; 63 (63)           ; 8 (8)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |matriz|casillero:inst9           ; work         ;
-;    |compara_vecinos:inst15|    ; 24 (24)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |matriz|compara_vecinos:inst15    ; work         ;
-;    |control:inst25|            ; 10 (10)           ; 5 (5)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |matriz|control:inst25            ; work         ;
-;    |decoder4to16:inst|         ; 17 (17)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |matriz|decoder4to16:inst         ; work         ;
-;    |genera_accion:inst20|      ; 6 (6)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |matriz|genera_accion:inst20      ; work         ;
-;    |genera_direcciones:inst23| ; 10 (10)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |matriz|genera_direcciones:inst23 ; work         ;
-;    |sentido:inst21|            ; 1 (1)             ; 2 (2)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |matriz|sentido:inst21            ; work         ;
-;    |tristate_control:inst18|   ; 24 (24)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |matriz|tristate_control:inst18   ; work         ;
-;    |uno_o_passthrough:inst75|  ; 10 (10)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |matriz|uno_o_passthrough:inst75  ; work         ;
-;    |uno_o_passthrough:inst76|  ; 43 (43)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |matriz|uno_o_passthrough:inst76  ; work         ;
-;    |uno_o_passthrough:inst77|  ; 17 (17)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |matriz|uno_o_passthrough:inst77  ; work         ;
-;    |uno_o_passthrough:inst78|  ; 43 (43)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |matriz|uno_o_passthrough:inst78  ; work         ;
-+--------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+-----------------------------------+--------------+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                         ;
++----------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+---------------------+--------------+
+; Compilation Hierarchy Node ; LC Combinationals ; LC Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name ; Library Name ;
++----------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+---------------------+--------------+
+; |contador_n_bits           ; 11 (11)           ; 9 (9)        ; 0           ; 0            ; 0       ; 0         ; 4    ; 0            ; |contador_n_bits    ; work         ;
++----------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+---------------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
-
-
-Encoding Type:  One-Hot
-+--------------------------------------------------------------------------------------------------------------------------+
-; State Machine - |matriz|control:inst25|fstate                                                                            ;
-+-----------------------+----------------------+--------------------+--------------+-----------------------+---------------+
-; Name                  ; fstate.Decide_Accion ; fstate.Actual_sent ; fstate.Choca ; fstate.Actualiza_Posc ; fstate.Avanza ;
-+-----------------------+----------------------+--------------------+--------------+-----------------------+---------------+
-; fstate.Avanza         ; 0                    ; 0                  ; 0            ; 0                     ; 0             ;
-; fstate.Actualiza_Posc ; 0                    ; 0                  ; 0            ; 1                     ; 1             ;
-; fstate.Choca          ; 0                    ; 0                  ; 1            ; 0                     ; 1             ;
-; fstate.Actual_sent    ; 0                    ; 1                  ; 0            ; 0                     ; 1             ;
-; fstate.Decide_Accion  ; 1                    ; 0                  ; 0            ; 0                     ; 1             ;
-+-----------------------+----------------------+--------------------+--------------+-----------------------+---------------+
-
-
-+---------------------------------------------------------------------------------+
-; Registers Removed During Synthesis                                              ;
-+---------------------------------------+-----------------------------------------+
-; Register name                         ; Reason for Removal                      ;
-+---------------------------------------+-----------------------------------------+
-; actualiza_muro:pone_muro|ena_At       ; Merged with actualiza_muro:pone_muro|At ;
-; actualiza_muro:pone_muro|ena_Ab       ; Merged with actualiza_muro:pone_muro|Ab ;
-; actualiza_muro:pone_muro|ena_Ad       ; Merged with actualiza_muro:pone_muro|Ad ;
-; actualiza_muro:pone_muro|ena_Ar       ; Merged with actualiza_muro:pone_muro|Ar ;
-; casillero:inst11|sel_Adelante         ; Lost fanout                             ;
-; Total Number of Removed Registers = 5 ;                                         ;
-+---------------------------------------+-----------------------------------------+
 
 
 +------------------------------------------------------+
@@ -285,96 +211,24 @@ Encoding Type:  One-Hot
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 136   ;
-; Number of registers using Synchronous Clear  ; 2     ;
+; Total registers                              ; 9     ;
+; Number of registers using Synchronous Clear  ; 0     ;
 ; Number of registers using Synchronous Load   ; 0     ;
-; Number of registers using Asynchronous Clear ; 123   ;
+; Number of registers using Asynchronous Clear ; 9     ;
 ; Number of registers using Asynchronous Load  ; 0     ;
-; Number of registers using Clock Enable       ; 0     ;
+; Number of registers using Clock Enable       ; 8     ;
 ; Number of registers using Preset             ; 0     ;
 +----------------------------------------------+-------+
 
 
-+---------------------------------------------------+
-; Inverted Register Statistics                      ;
-+-----------------------------------------+---------+
-; Inverted Register                       ; Fan out ;
-+-----------------------------------------+---------+
-; sentido:inst21|sentido_reg[0]           ; 10      ;
-; casillero:inst0|registro[3]             ; 11      ;
-; casillero:inst0|registro[2]             ; 9       ;
-; casillero:inst1|registro[3]             ; 10      ;
-; casillero:inst1|registro[2]             ; 10      ;
-; casillero:inst10|registro[3]            ; 16      ;
-; casillero:inst10|registro[2]            ; 13      ;
-; casillero:inst11|registro[3]            ; 12      ;
-; casillero:inst11|registro[2]            ; 9       ;
-; casillero:inst12|registro[3]            ; 9       ;
-; casillero:inst12|registro[2]            ; 9       ;
-; casillero:inst13|registro[3]            ; 12      ;
-; casillero:inst13|registro[2]            ; 12      ;
-; casillero:inst14|registro[3]            ; 11      ;
-; casillero:inst14|registro[2]            ; 8       ;
-; casillero:inst2|registro[3]             ; 11      ;
-; casillero:inst2|registro[2]             ; 11      ;
-; casillero:inst3|registro[3]             ; 9       ;
-; casillero:inst3|registro[2]             ; 9       ;
-; casillero:inst4|registro[3]             ; 13      ;
-; casillero:inst4|registro[2]             ; 13      ;
-; casillero:inst5|registro[3]             ; 17      ;
-; casillero:inst5|registro[2]             ; 11      ;
-; casillero:inst6|registro[3]             ; 14      ;
-; casillero:inst6|registro[2]             ; 11      ;
-; casillero:inst7|registro[3]             ; 11      ;
-; casillero:inst7|registro[2]             ; 11      ;
-; casillero:inst8|registro[3]             ; 11      ;
-; casillero:inst8|registro[2]             ; 10      ;
-; casillero:inst9|registro[3]             ; 20      ;
-; casillero:inst9|registro[2]             ; 11      ;
-; accion:inst22|accion_out[1]             ; 1       ;
-; accion:inst22|accion_out[0]             ; 1       ;
-; Total number of inverted registers = 33 ;         ;
-+-----------------------------------------+---------+
-
-
-+------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                             ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------------------------+
-; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                   ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------------------------+
-; 3:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; No         ; |matriz|casillero:inst12|min_value[2]        ;
-; 3:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; No         ; |matriz|casillero:inst12|min_value[0]        ;
-; 4:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; No         ; |matriz|tristate_control:inst18|Mux0         ;
-; 4:1                ; 12 bits   ; 24 LEs        ; 24 LEs               ; 0 LEs                  ; No         ; |matriz|tristate_control:inst18|Mux3         ;
-; 5:1                ; 4 bits    ; 12 LEs        ; 12 LEs               ; 0 LEs                  ; No         ; |matriz|uno_o_passthrough:inst77|out_bits[2] ;
-; 5:1                ; 4 bits    ; 12 LEs        ; 12 LEs               ; 0 LEs                  ; No         ; |matriz|uno_o_passthrough:inst75|out_bits[3] ;
-; 4:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; No         ; |matriz|casillero:inst0|min_value[2]         ;
-; 4:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; No         ; |matriz|casillero:inst0|min_value[1]         ;
-; 4:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; No         ; |matriz|casillero:inst1|min_value[3]         ;
-; 4:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; No         ; |matriz|casillero:inst1|min_value[1]         ;
-; 4:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; No         ; |matriz|casillero:inst10|min_value[3]        ;
-; 4:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; No         ; |matriz|casillero:inst13|min_value[2]        ;
-; 4:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; No         ; |matriz|casillero:inst13|min_value[0]        ;
-; 4:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; No         ; |matriz|casillero:inst14|min_value[3]        ;
-; 4:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; No         ; |matriz|casillero:inst14|min_value[1]        ;
-; 4:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; No         ; |matriz|casillero:inst2|min_value[2]         ;
-; 4:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; No         ; |matriz|casillero:inst2|min_value[0]         ;
-; 4:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; No         ; |matriz|casillero:inst3|min_value[2]         ;
-; 4:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; No         ; |matriz|casillero:inst3|min_value[0]         ;
-; 4:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; No         ; |matriz|casillero:inst4|min_value[2]         ;
-; 4:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; No         ; |matriz|casillero:inst4|min_value[1]         ;
-; 4:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; No         ; |matriz|casillero:inst5|min_value[2]         ;
-; 4:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; No         ; |matriz|casillero:inst6|min_value[2]         ;
-; 4:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; No         ; |matriz|casillero:inst7|min_value[2]         ;
-; 4:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; No         ; |matriz|casillero:inst7|min_value[0]         ;
-; 4:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; No         ; |matriz|casillero:inst8|min_value[2]         ;
-; 4:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; No         ; |matriz|casillero:inst8|min_value[0]         ;
-; 4:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; No         ; |matriz|casillero:inst9|min_value[0]         ;
-; 4:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; No         ; |matriz|casillero:inst11|min_value[0]        ;
-; 4:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; No         ; |matriz|casillero:inst11|min_value[3]        ;
-; 17:1               ; 4 bits    ; 44 LEs        ; 40 LEs               ; 4 LEs                  ; No         ; |matriz|uno_o_passthrough:inst76|out_bits[2] ;
-; 17:1               ; 4 bits    ; 44 LEs        ; 40 LEs               ; 4 LEs                  ; No         ; |matriz|uno_o_passthrough:inst78|out_bits[0] ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------------------------+
++---------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: Top-level Entity: |contador_n_bits ;
++----------------+-------+--------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                   ;
++----------------+-------+--------------------------------------------------------+
+; N              ; 8     ; Signed Integer                                         ;
++----------------+-------+--------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
 +-------------------------------+
@@ -382,7 +236,7 @@ Encoding Type:  One-Hot
 +----------------+--------------+
 ; Partition Name ; Elapsed Time ;
 +----------------+--------------+
-; Top            ; 00:00:04     ;
+; Top            ; 00:00:00     ;
 +----------------+--------------+
 
 
@@ -392,9 +246,12 @@ Encoding Type:  One-Hot
 Info: *******************************************************************
 Info: Running Quartus II 64-Bit Analysis & Synthesis
     Info: Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
-    Info: Processing started: Mon Oct 14 21:19:49 2024
+    Info: Processing started: Fri Oct 18 18:22:29 2024
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off raton -c raton
 Warning (20028): Parallel compilation is not licensed and has been disabled
+Info (12021): Found 2 design units, including 1 entities, in source file control_motor.vhd
+    Info (12022): Found design unit 1: control_motor-BEHAVIOR
+    Info (12023): Found entity 1: control_motor
 Info (12021): Found 2 design units, including 1 entities, in source file decoder4to16.vhd
     Info (12022): Found design unit 1: decoder4to16-Behavioral
     Info (12023): Found entity 1: decoder4to16
@@ -421,8 +278,6 @@ Info (12021): Found 2 design units, including 1 entities, in source file cero.vh
     Info (12023): Found entity 1: cero
 Info (12021): Found 1 design units, including 1 entities, in source file matriz.bdf
     Info (12023): Found entity 1: matriz
-Info (12021): Found 1 design units, including 1 entities, in source file matriz_prupru.bdf
-    Info (12023): Found entity 1: matriz_prupru
 Info (12021): Found 2 design units, including 1 entities, in source file actualiza_actual.vhd
     Info (12022): Found design unit 1: actualiza_actual-Behavioral
     Info (12023): Found entity 1: actualiza_actual
@@ -447,132 +302,22 @@ Info (12021): Found 2 design units, including 1 entities, in source file uno_o_p
 Info (12021): Found 2 design units, including 1 entities, in source file control.vhd
     Info (12022): Found design unit 1: control-BEHAVIOR
     Info (12023): Found entity 1: control
-Info (12127): Elaborating entity "matriz" for the top level hierarchy
-Warning (275083): Bus "input_10[3..0]" found using same base name as "input_1", which might lead to a name conflict.
-Warning (275083): Bus "input_11[3..0]" found using same base name as "input_1", which might lead to a name conflict.
-Warning (275083): Bus "input_12[3..0]" found using same base name as "input_1", which might lead to a name conflict.
-Warning (275083): Bus "input_13[3..0]" found using same base name as "input_1", which might lead to a name conflict.
-Warning (275080): Converted elements in bus name "input_1" using legacy naming rules. Make any assignments on the new names, not on the original names.
-    Warning (275081): Converted element name(s) from "input_1[3..0]" to "input_13..0"
-Warning (275080): Converted elements in bus name "input_10" using legacy naming rules. Make any assignments on the new names, not on the original names.
-    Warning (275081): Converted element name(s) from "input_10[3..0]" to "input_103..0"
-Warning (275080): Converted elements in bus name "input_11" using legacy naming rules. Make any assignments on the new names, not on the original names.
-    Warning (275081): Converted element name(s) from "input_11[3..0]" to "input_113..0"
-Warning (275080): Converted elements in bus name "input_12" using legacy naming rules. Make any assignments on the new names, not on the original names.
-    Warning (275081): Converted element name(s) from "input_12[3..0]" to "input_123..0"
-Warning (275080): Converted elements in bus name "input_13" using legacy naming rules. Make any assignments on the new names, not on the original names.
-    Warning (275081): Converted element name(s) from "input_13[3..0]" to "input_133..0"
-Warning (275083): Bus "input_10[3..0]" found using same base name as "input_1", which might lead to a name conflict.
-Warning (275083): Bus "input_11[3..0]" found using same base name as "input_1", which might lead to a name conflict.
-Warning (275083): Bus "input_12[3..0]" found using same base name as "input_1", which might lead to a name conflict.
-Warning (275083): Bus "input_13[3..0]" found using same base name as "input_1", which might lead to a name conflict.
-Warning (275080): Converted elements in bus name "input_1" using legacy naming rules. Make any assignments on the new names, not on the original names.
-    Warning (275081): Converted element name(s) from "input_1[3..0]" to "input_13..0"
-Warning (275080): Converted elements in bus name "input_10" using legacy naming rules. Make any assignments on the new names, not on the original names.
-    Warning (275081): Converted element name(s) from "input_10[3..0]" to "input_103..0"
-Warning (275080): Converted elements in bus name "input_11" using legacy naming rules. Make any assignments on the new names, not on the original names.
-    Warning (275081): Converted element name(s) from "input_11[3..0]" to "input_113..0"
-Warning (275080): Converted elements in bus name "input_12" using legacy naming rules. Make any assignments on the new names, not on the original names.
-    Warning (275081): Converted element name(s) from "input_12[3..0]" to "input_123..0"
-Warning (275080): Converted elements in bus name "input_13" using legacy naming rules. Make any assignments on the new names, not on the original names.
-    Warning (275081): Converted element name(s) from "input_13[3..0]" to "input_133..0"
-Warning (275083): Bus "input_10[3..0]" found using same base name as "input_1", which might lead to a name conflict.
-Warning (275083): Bus "input_11[3..0]" found using same base name as "input_1", which might lead to a name conflict.
-Warning (275083): Bus "input_12[3..0]" found using same base name as "input_1", which might lead to a name conflict.
-Warning (275083): Bus "input_13[3..0]" found using same base name as "input_1", which might lead to a name conflict.
-Warning (275080): Converted elements in bus name "input_1" using legacy naming rules. Make any assignments on the new names, not on the original names.
-    Warning (275081): Converted element name(s) from "input_1[3..0]" to "input_13..0"
-Warning (275080): Converted elements in bus name "input_10" using legacy naming rules. Make any assignments on the new names, not on the original names.
-    Warning (275081): Converted element name(s) from "input_10[3..0]" to "input_103..0"
-Warning (275080): Converted elements in bus name "input_11" using legacy naming rules. Make any assignments on the new names, not on the original names.
-    Warning (275081): Converted element name(s) from "input_11[3..0]" to "input_113..0"
-Warning (275080): Converted elements in bus name "input_12" using legacy naming rules. Make any assignments on the new names, not on the original names.
-    Warning (275081): Converted element name(s) from "input_12[3..0]" to "input_123..0"
-Warning (275080): Converted elements in bus name "input_13" using legacy naming rules. Make any assignments on the new names, not on the original names.
-    Warning (275081): Converted element name(s) from "input_13[3..0]" to "input_133..0"
-Warning (275083): Bus "input_10[3..0]" found using same base name as "input_1", which might lead to a name conflict.
-Warning (275083): Bus "input_11[3..0]" found using same base name as "input_1", which might lead to a name conflict.
-Warning (275083): Bus "input_12[3..0]" found using same base name as "input_1", which might lead to a name conflict.
-Warning (275083): Bus "input_13[3..0]" found using same base name as "input_1", which might lead to a name conflict.
-Warning (275080): Converted elements in bus name "input_1" using legacy naming rules. Make any assignments on the new names, not on the original names.
-    Warning (275081): Converted element name(s) from "input_1[3..0]" to "input_13..0"
-Warning (275080): Converted elements in bus name "input_10" using legacy naming rules. Make any assignments on the new names, not on the original names.
-    Warning (275081): Converted element name(s) from "input_10[3..0]" to "input_103..0"
-Warning (275080): Converted elements in bus name "input_11" using legacy naming rules. Make any assignments on the new names, not on the original names.
-    Warning (275081): Converted element name(s) from "input_11[3..0]" to "input_113..0"
-Warning (275080): Converted elements in bus name "input_12" using legacy naming rules. Make any assignments on the new names, not on the original names.
-    Warning (275081): Converted element name(s) from "input_12[3..0]" to "input_123..0"
-Warning (275080): Converted elements in bus name "input_13" using legacy naming rules. Make any assignments on the new names, not on the original names.
-    Warning (275081): Converted element name(s) from "input_13[3..0]" to "input_133..0"
-Warning (275011): Block or symbol "F" of instance "inst32" overlaps another block or symbol
-Warning (275011): Block or symbol "casillero" of instance "inst0" overlaps another block or symbol
-Warning (275011): Block or symbol "casillero" of instance "inst2" overlaps another block or symbol
-Warning (275011): Block or symbol "casillero" of instance "inst5" overlaps another block or symbol
-Warning (275011): Block or symbol "casillero" of instance "inst6" overlaps another block or symbol
-Warning (275011): Block or symbol "F" of instance "inst_F6" overlaps another block or symbol
-Warning (275011): Block or symbol "F" of instance "inst_F7" overlaps another block or symbol
-Warning (275011): Block or symbol "F" of instance "inst_9" overlaps another block or symbol
-Warning (275011): Block or symbol "F" of instance "inst_F10" overlaps another block or symbol
-Warning (275011): Block or symbol "casillero" of instance "inst9" overlaps another block or symbol
-Warning (275011): Block or symbol "casillero" of instance "inst11" overlaps another block or symbol
-Warning (275011): Block or symbol "casillero" of instance "inst7" overlaps another block or symbol
-Warning (275011): Block or symbol "compara_vecinos" of instance "inst15" overlaps another block or symbol
-Warning (275011): Block or symbol "actualiza_muro" of instance "pone_muro" overlaps another block or symbol
-Info (12128): Elaborating entity "decoder4to16" for hierarchy "decoder4to16:inst"
-Info (12128): Elaborating entity "control" for hierarchy "control:inst25"
-Info (12128): Elaborating entity "actualiza_actual" for hierarchy "actualiza_actual:inst24"
-Info (12128): Elaborating entity "sentido" for hierarchy "sentido:inst21"
-Info (12128): Elaborating entity "compara_vecinos" for hierarchy "compara_vecinos:inst15"
-Info (12128): Elaborating entity "uno_o_passthrough" for hierarchy "uno_o_passthrough:inst77"
-Warning (10492): VHDL Process Statement warning at uno_o_passthrough.vhd(19): signal "in_bits" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
-Info (12128): Elaborating entity "actualiza_muro" for hierarchy "actualiza_muro:pone_muro"
-Info (12128): Elaborating entity "tristate_control" for hierarchy "tristate_control:inst18"
-Warning (10492): VHDL Process Statement warning at tristate_control.vhd(40): signal "input_0" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
-Warning (10492): VHDL Process Statement warning at tristate_control.vhd(41): signal "input_1" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
-Warning (10492): VHDL Process Statement warning at tristate_control.vhd(42): signal "input_2" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
-Warning (10492): VHDL Process Statement warning at tristate_control.vhd(43): signal "input_3" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
-Warning (10492): VHDL Process Statement warning at tristate_control.vhd(44): signal "input_4" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
-Warning (10492): VHDL Process Statement warning at tristate_control.vhd(45): signal "input_5" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
-Warning (10492): VHDL Process Statement warning at tristate_control.vhd(46): signal "input_6" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
-Warning (10492): VHDL Process Statement warning at tristate_control.vhd(47): signal "input_7" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
-Warning (10492): VHDL Process Statement warning at tristate_control.vhd(48): signal "input_8" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
-Warning (10492): VHDL Process Statement warning at tristate_control.vhd(49): signal "input_9" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
-Warning (10492): VHDL Process Statement warning at tristate_control.vhd(50): signal "input_10" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
-Warning (10492): VHDL Process Statement warning at tristate_control.vhd(51): signal "input_11" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
-Warning (10492): VHDL Process Statement warning at tristate_control.vhd(52): signal "input_12" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
-Warning (10492): VHDL Process Statement warning at tristate_control.vhd(53): signal "input_13" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
-Warning (10492): VHDL Process Statement warning at tristate_control.vhd(54): signal "input_14" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
-Warning (10492): VHDL Process Statement warning at tristate_control.vhd(55): signal "input_15" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
-Info (12128): Elaborating entity "casillero" for hierarchy "casillero:inst0"
-Info (12128): Elaborating entity "F" for hierarchy "F:inst_F8"
-Info (12128): Elaborating entity "cero" for hierarchy "cero:Lllegada"
-Info (12128): Elaborating entity "genera_direcciones" for hierarchy "genera_direcciones:inst23"
-Info (12128): Elaborating entity "accion" for hierarchy "accion:inst22"
-Info (12128): Elaborating entity "genera_accion" for hierarchy "genera_accion:inst20"
-Warning (10631): VHDL Process Statement warning at genera_accion.vhd(21): inferring latch(es) for signal or variable "accion", which holds its previous value in one or more paths through the process
-Info (10041): Inferred latch for "accion[0]" at genera_accion.vhd(21)
-Info (10041): Inferred latch for "accion[1]" at genera_accion.vhd(21)
-Warning (14026): LATCH primitive "genera_accion:inst20|accion[0]" is permanently enabled
-Warning (14026): LATCH primitive "genera_accion:inst20|accion[1]" is permanently enabled
-Info (13000): Registers with preset signals will power-up high
-Info (13003): DEV_CLRn pin will set, and not reset, register with preset signal due to NOT Gate Push-Back
-Warning (13024): Output pins are stuck at VCC or GND
-    Warning (13410): Pin "C15[3]" is stuck at GND
-    Warning (13410): Pin "C15[2]" is stuck at GND
-    Warning (13410): Pin "C15[1]" is stuck at GND
-    Warning (13410): Pin "C15[0]" is stuck at GND
+Info (12021): Found 2 design units, including 1 entities, in source file contador_n_bits.vhd
+    Info (12022): Found design unit 1: contador_n_bits-Behavioral
+    Info (12023): Found entity 1: contador_n_bits
+Info (12127): Elaborating entity "contador_n_bits" for the top level hierarchy
+Warning (10540): VHDL Signal Declaration warning at contador_n_bits.vhd(20): used explicit default value for signal "max_value" because signal was never assigned a value
 Info (286030): Timing-Driven Synthesis is running
-Info (17049): 1 registers lost all their fanouts during netlist optimizations.
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Info (21057): Implemented 1124 device resources after synthesis - the final resource count might be different
-    Info (21058): Implemented 4 input pins
-    Info (21059): Implemented 119 output pins
-    Info (21061): Implemented 1001 logic cells
-Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 96 warnings
-    Info: Peak virtual memory: 4635 megabytes
-    Info: Processing ended: Mon Oct 14 21:19:56 2024
-    Info: Elapsed time: 00:00:07
-    Info: Total CPU time (on all processors): 00:00:05
+Info (21057): Implemented 15 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 3 input pins
+    Info (21059): Implemented 1 output pins
+    Info (21061): Implemented 11 logic cells
+Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 2 warnings
+    Info: Peak virtual memory: 4630 megabytes
+    Info: Processing ended: Fri Oct 18 18:22:32 2024
+    Info: Elapsed time: 00:00:03
+    Info: Total CPU time (on all processors): 00:00:03
 
 
