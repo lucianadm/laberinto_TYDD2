@@ -9,6 +9,7 @@ entity matriz_vlg_check_tst is
         Arriba          : in     vl_logic_vector(3 downto 0);
         Atras           : in     vl_logic_vector(3 downto 0);
         C0              : in     vl_logic_vector(3 downto 0);
+        c1              : in     vl_logic;
         C2              : in     vl_logic_vector(3 downto 0);
         C3              : in     vl_logic_vector(3 downto 0);
         C4              : in     vl_logic_vector(3 downto 0);
@@ -36,10 +37,14 @@ entity matriz_vlg_check_tst is
         ena_Ad          : in     vl_logic;
         ena_Ar          : in     vl_logic;
         ena_At          : in     vl_logic;
-        Hab_accion29    : in     vl_logic;
-        Hab_Actual28    : in     vl_logic;
+        fin             : in     vl_logic;
+        H               : in     vl_logic_vector(1 downto 0);
+        Hab_accion      : in     vl_logic;
+        Hab_Actual      : in     vl_logic;
         Hab_muro        : in     vl_logic;
-        Hab_sentido27   : in     vl_logic;
+        Hab_sentido     : in     vl_logic;
+        MD              : in     vl_logic_vector(1 downto 0);
+        MI              : in     vl_logic_vector(1 downto 0);
         sentido         : in     vl_logic_vector(1 downto 0);
         sentido_nw      : in     vl_logic_vector(1 downto 0);
         Y15             : in     vl_logic;

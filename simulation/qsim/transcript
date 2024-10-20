@@ -13,28 +13,25 @@
 # 
 # Top level modules:
 # 	matriz_vlg_vec_tst
-# vsim -L cycloneiii_ver -L altera_ver -L altera_mf_ver -L 220model_ver -L sgate -c -t 1ps -novopt work.matriz_vlg_vec_tst 
+# vsim -L cycloneive_ver -L altera_ver -L altera_mf_ver -L 220model_ver -L sgate -c -t 1ps -novopt work.matriz_vlg_vec_tst 
 # Loading work.matriz_vlg_vec_tst
 # Loading work.matriz
-# Loading cycloneiii_ver.cycloneiii_lcell_comb
 # Loading altera_ver.dffeas
-# Loading cycloneiii_ver.cycloneiii_io_ibuf
-# Loading cycloneiii_ver.cycloneiii_clkctrl
-# Loading cycloneiii_ver.cycloneiii_mux41
-# Loading cycloneiii_ver.cycloneiii_ena_reg
-# Loading cycloneiii_ver.cycloneiii_io_obuf
+# Loading cycloneive_ver.cycloneive_pll
+# Loading cycloneive_ver.cycloneive_m_cntr
+# Loading cycloneive_ver.cycloneive_n_cntr
+# Loading cycloneive_ver.cycloneive_scale_cntr
+# Loading cycloneive_ver.cycloneive_lcell_comb
+# Loading cycloneive_ver.cycloneive_clkctrl
+# Loading cycloneive_ver.cycloneive_mux41
+# Loading cycloneive_ver.cycloneive_ena_reg
+# Loading cycloneive_ver.cycloneive_io_obuf
+# Loading cycloneive_ver.cycloneive_io_ibuf
 # Loading work.matriz_vlg_sample_tst
 # Loading work.matriz_vlg_check_tst
 # Loading altera_ver.PRIM_GDFF_LOW
-# ERROR! Vector Mismatch for output port actual[1] :: @time = 410000.000 ps
-#      Expected value = 1111
-#      Real value = 0001
-# ERROR! Vector Mismatch for output port actual[2] :: @time = 410000.000 ps
-#      Expected value = 1111
-#      Real value = 0001
-# ERROR! Vector Mismatch for output port actual[3] :: @time = 410000.000 ps
-#      Expected value = 1111
-#      Real value = 0001
-#           3 mismatched vectors : Simulation failed !
-# ** Note: $finish    : raton.vt(1732)
+#  Note : Cycloneive PLL was reset
+# Time: 10000.000 ps  Instance: matriz_vlg_vec_tst.i1.\inst81|altpll_component|auto_generated|pll1 
+# Simulation passed !
+# ** Note: $finish    : raton.vt(562)
 #    Time: 1 us  Iteration: 0  Instance: /matriz_vlg_vec_tst/tb_out
